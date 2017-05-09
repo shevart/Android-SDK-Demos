@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidCoreLearn</string>
+    <string name="start_not_sticky_service">Start not sticky service</string>
+    <string name="select_topic">Select topic:</string>
+</resources>
