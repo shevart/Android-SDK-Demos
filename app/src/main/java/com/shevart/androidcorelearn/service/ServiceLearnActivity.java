@@ -16,6 +16,11 @@ public class ServiceLearnActivity extends AppCompatActivity {
                 case R.id.btStartNotStickyService:
                     startService(new Intent(ServiceLearnActivity.this, NotStickyService.class));
                     break;
+                case R.id.btStartBinderServiceScreen:
+                    startActivity(new Intent(ServiceLearnActivity.this, BinderServiceActivity.class));
+                    break;
+                default:
+                    throw new IllegalArgumentException("Handle it!");
             }
         }
     };
@@ -25,5 +30,6 @@ public class ServiceLearnActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service_learn);
         findViewById(R.id.btStartNotStickyService).setOnClickListener(serviceClickListener);
+        findViewById(R.id.btStartBinderServiceScreen).setOnClickListener(serviceClickListener);
     }
 }

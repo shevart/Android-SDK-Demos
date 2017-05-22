@@ -2,4 +2,6 @@
     <string name="app_name">AndroidCoreLearn</string>
     <string name="start_not_sticky_service">Start not sticky service</string>
     <string name="select_topic">Select topic:</string>
+    <string name="binderservice_control_panel">BinderService control panel</string>
+    <string name="start_binder_service_screen">Start binder service screen</string>
 </resources>

@@ -18,8 +18,10 @@
         </activity>
         <activity android:name=".service.ServiceLearnActivity" />
 
-        <service
-            android:name=".service.service_not_sticky.NotStickyService"/>
+        <service android:name=".service.service_not_sticky.NotStickyService" />
+        <service android:name=".service.service_not_sticky.BinderService" />
+
+        <activity android:name=".service.BinderServiceActivity"></activity>
     </application>
 
 </manifest>
