@@ -13,6 +13,7 @@ import android.widget.RadioButton;
 import com.shevart.androidcorelearn.R;
 import com.shevart.androidcorelearn.service.service_not_sticky.BinderService;
 import com.shevart.androidcorelearn.utils.LogUtil;
+import com.shevart.androidcorelearn.utils.UiNotificationsUtils;
 
 public class BinderServiceActivity extends AppCompatActivity {
     private BinderService.MyBinder myBinder;
@@ -40,10 +41,18 @@ public class BinderServiceActivity extends AppCompatActivity {
                 }
             }
         });
+
+        findViewById(R.id.btForceDestroyBoundService).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (myBinder != null)
+                    myBinder.getBinderService().forceManualStopService();
+            }
+        });
     }
 
     private void bindToService() {
-        LogUtil.e("bindService()");
+        UiNotificationsUtils.showDevMessage(this, "bindService()");
         myConnection = new ServiceConnection() {
             @Override
             public void onServiceConnected(ComponentName name, IBinder service) {
@@ -53,7 +62,7 @@ public class BinderServiceActivity extends AppCompatActivity {
 
             @Override
             public void onServiceDisconnected(ComponentName name) {
-                LogUtil.e("onServiceDisconnected() ");
+                UiNotificationsUtils.showDevMessage(BinderServiceActivity.this, "onServiceDisconnected() ");
                 LogUtil.e(name.getClassName());
                 myBinder = null;
                 onDisconnected();
@@ -64,7 +73,7 @@ public class BinderServiceActivity extends AppCompatActivity {
     }
 
     private void unbindFromService() {
-        LogUtil.e("unbindFromService()");
+        UiNotificationsUtils.showDevMessage(this, "unbindFromService()");
         unbindService(myConnection);
         myBinder = null;
         myConnection = null;
@@ -79,12 +88,12 @@ public class BinderServiceActivity extends AppCompatActivity {
     }
 
     private void onConnected() {
-        LogUtil.e("onConnected()");
+        UiNotificationsUtils.showDevMessage(this, "onConnected()");
         rbBounded.setChecked(true);
     }
 
     private void onDisconnected() {
-        LogUtil.e("onDisconnected()");
+        UiNotificationsUtils.showDevMessage(this, "onDisconnected()");
         rbUnbounded.setChecked(true);
         myConnection = null;
     }

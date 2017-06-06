@@ -17,7 +17,7 @@ public class UiNotificationsUtils {
     public static void showDevMessage(@NonNull Context context, @NonNull String msg) {
         if (isDebug) {
             showEmptyToast(context, msg);
-            Log.e(UiNotificationsUtils.class.getSimpleName(), msg);
+            LogUtil.e(msg);
         }
     }
 }

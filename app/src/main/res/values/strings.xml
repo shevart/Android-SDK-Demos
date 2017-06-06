@@ -4,4 +4,9 @@
     <string name="select_topic">Select topic:</string>
     <string name="binderservice_control_panel">BinderService control panel</string>
     <string name="start_binder_service_screen">Start binder service screen</string>
+    <string name="bound_unbound">Bound/Unbound</string>
+    <string name="current_status">Current status</string>
+    <string name="force_stop_boud_service">Force stop boud service</string>
+    <string name="unbound">Unbound</string>
+    <string name="bound">Bound</string>
 </resources>
