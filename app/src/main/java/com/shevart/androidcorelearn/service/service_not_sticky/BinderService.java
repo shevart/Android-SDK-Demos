@@ -6,6 +6,8 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.support.annotation.NonNull;
 
+import com.shevart.androidcorelearn.utils.LogUtil;
+
 public class BinderService extends Service {
     private MyBinder myBinder = new MyBinder(this);
 
@@ -14,7 +16,24 @@ public class BinderService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
+        LogUtil.e("BinderService: onBind()");
         return myBinder;
+    }
+
+    @Override
+    public boolean onUnbind(Intent intent) {
+        LogUtil.e("BinderService: onUnbind()");
+        return super.onUnbind(intent);
+    }
+
+    @Override
+    public void onDestroy() {
+        LogUtil.e("BinderService: onDestroy()");
+        super.onDestroy();
+    }
+
+    public void forceManualStopService() {
+        stopSelf();
     }
 
     public static class MyBinder extends Binder {

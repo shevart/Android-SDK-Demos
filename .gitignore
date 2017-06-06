@@ -9,3 +9,6 @@ taskHistory.bin
 taskHistory.lock
 profile-2017-05-23-19-18-01-175.rawproto
 app.iml
+.gradle/4.0-milestone-1/fileChanges
+.gradle
+build
