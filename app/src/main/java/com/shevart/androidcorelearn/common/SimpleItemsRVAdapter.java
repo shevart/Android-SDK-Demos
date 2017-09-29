@@ -1,15 +1,24 @@
 package com.shevart.androidcorelearn.common;
 
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.shevart.androidcorelearn.R;
 import com.shevart.androidcorelearn.utils.UiUtil;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @SuppressWarnings("WeakerAccess")
 public class SimpleItemsRVAdapter extends RecyclerView.Adapter<SimpleItemsRVAdapter.ViewHolder> {
+    private List<SimpleItem> items = new ArrayList<>();
 
+    public SimpleItemsRVAdapter(@NonNull List<SimpleItem> items) {
+        update(items);
+    }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -18,20 +27,27 @@ public class SimpleItemsRVAdapter extends RecyclerView.Adapter<SimpleItemsRVAdap
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-
+        SimpleItem item = items.get(position);
+        holder.tvSimpleItem.setText(item.getTitle());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return items.size();
+    }
+
+    public void update(@NonNull List<SimpleItem> newItems) {
+        items.clear();
+        items.addAll(newItems);
+        notifyDataSetChanged();
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
+        final TextView tvSimpleItem;
 
         public ViewHolder(View itemView) {
             super(itemView);
+            tvSimpleItem = (TextView) itemView.findViewById(R.id.tvSimpleItem);
         }
     }
-
-
 }

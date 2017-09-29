@@ -1,15 +1,15 @@
-package com.shevart.androidcorelearn.fragments;
+package com.shevart.androidcorelearn.fragments.mobile_and_tablet_ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.shevart.androidcorelearn.R;
 
-public class FragmentsDemoActivity extends AppCompatActivity {
+public class DetailScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fragments_demo);
+        setContentView(R.layout.activity_detail_screen);
     }
 }

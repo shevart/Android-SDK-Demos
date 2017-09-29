@@ -9,4 +9,7 @@
     <string name="force_stop_boud_service">Force stop boud service</string>
     <string name="unbound">Unbound</string>
     <string name="bound">Bound</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
