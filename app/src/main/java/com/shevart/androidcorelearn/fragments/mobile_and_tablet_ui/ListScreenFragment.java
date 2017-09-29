@@ -14,10 +14,12 @@ import com.shevart.androidcorelearn.common.SimpleItem;
 import com.shevart.androidcorelearn.common.SimpleItemsRVAdapter;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ListScreenFragment extends Fragment implements SimpleItemsRVAdapter.OnSimpleItemSelectedListener {
     private static final String LIST_ITEMS_KEY = "list_items_key";
+    private SimpleItemsRVAdapter adapter;
 
     public ListScreenFragment() {
     }
@@ -34,19 +36,26 @@ public class ListScreenFragment extends Fragment implements SimpleItemsRVAdapter
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_list_screen, container, false);
-
+        adapter = new SimpleItemsRVAdapter(this, getItemsFromArguments());
         RecyclerView rvSimpleItems = (RecyclerView) view.findViewById(R.id.rvSimpleItems);
         rvSimpleItems.setLayoutManager(new LinearLayoutManager(getContext()));
-        rvSimpleItems.setAdapter(new SimpleItemsRVAdapter(this, getItemsFromArguments()));
+        rvSimpleItems.setAdapter(adapter);
         return view;
     }
 
     private List<SimpleItem> getItemsFromArguments() {
-        return getArguments().getParcelableArrayList(LIST_ITEMS_KEY);
+        if (getArguments() != null)
+            return getArguments().getParcelableArrayList(LIST_ITEMS_KEY);
+        else
+            return Collections.emptyList();
     }
 
     @Override
     public void onSimpleItemSelected(@NonNull SimpleItem simpleItem) {
         ((MobileAndTabletUIFragmentsDemoActivity) getActivity()).onItemSelected(simpleItem);
+    }
+
+    void updateItems(@NonNull ArrayList<SimpleItem> items) {
+        adapter.update(items);
     }
 }

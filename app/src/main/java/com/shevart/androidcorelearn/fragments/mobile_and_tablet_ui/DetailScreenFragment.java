@@ -2,6 +2,7 @@ package com.shevart.androidcorelearn.fragments.mobile_and_tablet_ui;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,11 @@ import java.util.Locale;
 
 public class DetailScreenFragment extends Fragment {
     private static final String ID_FORMAT_PATTERN = "Id: %d";
+
+    private TextView tvSimpleItemId;
+    private TextView tvSimpleItemTitle;
+    private TextView tvSimpleItemDescription;
+
     public DetailScreenFragment() {
     }
 
@@ -30,14 +36,26 @@ public class DetailScreenFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_detail_screen, container, false);
+        tvSimpleItemId = ((TextView) view.findViewById(R.id.tvSimpleItemId));
+        tvSimpleItemTitle = ((TextView) view.findViewById(R.id.tvSimpleItemTitle));
+        tvSimpleItemDescription = ((TextView) view.findViewById(R.id.tvSimpleItemDescription));
         SimpleItem item = getSimpleItemFromArguments();
-        ((TextView) view.findViewById(R.id.tvSimpleItemId)).setText(String.format(Locale.ENGLISH, ID_FORMAT_PATTERN, item.getId()));
-        ((TextView) view.findViewById(R.id.tvSimpleItemTitle)).setText(item.getTitle());
-        ((TextView) view.findViewById(R.id.tvSimpleItemDescription)).setText(item.getDescription());
+        if (item != null)
+            update(getSimpleItemFromArguments());
         return view;
     }
 
+    public void update(@NonNull SimpleItem item) {
+        tvSimpleItemId.setText(String.format(Locale.ENGLISH, ID_FORMAT_PATTERN, item.getId()));
+        tvSimpleItemTitle.setText(item.getTitle());
+        tvSimpleItemDescription.setText(item.getDescription());
+    }
+
+    @Nullable
     private SimpleItem getSimpleItemFromArguments() {
-        return getArguments().getParcelable(SimpleItem.class.getSimpleName());
+        if (getArguments() != null)
+            return getArguments().getParcelable(SimpleItem.class.getSimpleName());
+        else
+            return null;
     }
 }

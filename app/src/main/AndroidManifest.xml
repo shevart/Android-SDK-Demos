@@ -8,7 +8,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:screenOrientation="portrait"
         android:theme="@style/AppTheme">
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,14 +19,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".service.ServiceLearnActivity" />
+        <activity android:name=".service.BinderServiceActivity" />
+        <activity
+            android:name=".fragments.FragmentsDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".fragments.mobile_and_tablet_ui.MobileAndTabletUIFragmentsDemoActivity" />
+        <activity android:name=".fragments.mobile_and_tablet_ui.DetailScreenActivity" />
 
         <service android:name=".service.service_not_sticky.NotStickyService" />
         <service android:name=".service.service_not_sticky.BinderService" />
-
-        <activity android:name=".service.BinderServiceActivity" />
-        <activity android:name=".fragments.FragmentsDemoActivity" />
-        <activity android:name=".fragments.mobile_and_tablet_ui.MobileAndTabletUIFragmentsDemoActivity" />
-        <activity android:name=".fragments.mobile_and_tablet_ui.DetailScreenActivity"></activity>
     </application>
-
 </manifest>

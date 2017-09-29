@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context="com.shevart.androidcorelearn.fragments.mobile_and_tablet_ui.MobileAndTabletUIFragmentsDemoActivity">
 
     <fragment
         android:id="@+id/fragList"
         class="com.shevart.androidcorelearn.fragments.mobile_and_tablet_ui.ListScreenFragment"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="match_parent" />
 
-</FrameLayout>
+    <fragment
+        android:id="@+id/fragDetail"
+        class="com.shevart.androidcorelearn.fragments.mobile_and_tablet_ui.DetailScreenFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

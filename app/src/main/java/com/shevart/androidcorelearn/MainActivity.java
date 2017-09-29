@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btFragmentsTopic:
                     startActivity(new Intent(MainActivity.this, FragmentsDemoActivity.class));
+                    break;
                 default:
                     throw new IllegalArgumentException("Handle it!");
             }
