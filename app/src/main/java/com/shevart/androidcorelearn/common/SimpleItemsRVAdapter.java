@@ -15,8 +15,11 @@ import java.util.List;
 @SuppressWarnings("WeakerAccess")
 public class SimpleItemsRVAdapter extends RecyclerView.Adapter<SimpleItemsRVAdapter.ViewHolder> {
     private List<SimpleItem> items = new ArrayList<>();
+    private OnSimpleItemSelectedListener simpleItemSelectedListener;
 
-    public SimpleItemsRVAdapter(@NonNull List<SimpleItem> items) {
+    public SimpleItemsRVAdapter(@NonNull OnSimpleItemSelectedListener listener,
+                                @NonNull List<SimpleItem> items) {
+        simpleItemSelectedListener = listener;
         update(items);
     }
 
@@ -26,9 +29,16 @@ public class SimpleItemsRVAdapter extends RecyclerView.Adapter<SimpleItemsRVAdap
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, int position) {
         SimpleItem item = items.get(position);
         holder.tvSimpleItem.setText(item.getTitle());
+        holder.tvSimpleItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                simpleItemSelectedListener.onSimpleItemSelected(
+                        items.get(holder.getAdapterPosition()));
+            }
+        });
     }
 
     @Override
@@ -49,5 +59,9 @@ public class SimpleItemsRVAdapter extends RecyclerView.Adapter<SimpleItemsRVAdap
             super(itemView);
             tvSimpleItem = (TextView) itemView.findViewById(R.id.tvSimpleItem);
         }
+    }
+
+    public interface OnSimpleItemSelectedListener {
+        void onSimpleItemSelected(@NonNull SimpleItem simpleItem);
     }
 }

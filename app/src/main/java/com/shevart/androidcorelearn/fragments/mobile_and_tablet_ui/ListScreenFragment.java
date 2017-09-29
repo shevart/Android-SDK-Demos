@@ -16,7 +16,7 @@ import com.shevart.androidcorelearn.common.SimpleItemsRVAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListScreenFragment extends Fragment {
+public class ListScreenFragment extends Fragment implements SimpleItemsRVAdapter.OnSimpleItemSelectedListener {
     private static final String LIST_ITEMS_KEY = "list_items_key";
 
     public ListScreenFragment() {
@@ -37,11 +37,16 @@ public class ListScreenFragment extends Fragment {
 
         RecyclerView rvSimpleItems = (RecyclerView) view.findViewById(R.id.rvSimpleItems);
         rvSimpleItems.setLayoutManager(new LinearLayoutManager(getContext()));
-        rvSimpleItems.setAdapter(new SimpleItemsRVAdapter(getItemsFromArguments()));
+        rvSimpleItems.setAdapter(new SimpleItemsRVAdapter(this, getItemsFromArguments()));
         return view;
     }
 
     private List<SimpleItem> getItemsFromArguments() {
         return getArguments().getParcelableArrayList(LIST_ITEMS_KEY);
+    }
+
+    @Override
+    public void onSimpleItemSelected(@NonNull SimpleItem simpleItem) {
+        ((MobileAndTabletUIFragmentsDemoActivity) getActivity()).onItemSelected(simpleItem);
     }
 }
