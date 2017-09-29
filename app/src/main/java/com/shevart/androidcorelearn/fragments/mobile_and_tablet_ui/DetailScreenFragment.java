@@ -41,7 +41,7 @@ public class DetailScreenFragment extends Fragment {
         tvSimpleItemDescription = ((TextView) view.findViewById(R.id.tvSimpleItemDescription));
         SimpleItem item = getSimpleItemFromArguments();
         if (item != null)
-            update(getSimpleItemFromArguments());
+            update(item);
         return view;
     }
 
