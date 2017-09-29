@@ -1,4 +1,4 @@
-package com.shevart.androidcorelearn.service.service_not_sticky;
+package com.shevart.androidcorelearn.service;
 
 import android.app.Service;
 import android.content.Intent;
@@ -33,17 +33,18 @@ public class BinderService extends Service {
     }
 
     public void forceManualStopService() {
+        LogUtil.e("forceManualStopService()");
         stopSelf();
     }
 
-    public static class MyBinder extends Binder {
+    static class MyBinder extends Binder {
         private BinderService binderService;
 
         MyBinder(@NonNull BinderService binderService) {
             this.binderService = binderService;
         }
 
-        public BinderService getBinderService() {
+        BinderService getBinderService() {
             return binderService;
         }
     }

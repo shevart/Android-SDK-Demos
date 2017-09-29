@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.RadioButton;
 
 import com.shevart.androidcorelearn.R;
-import com.shevart.androidcorelearn.service.service_not_sticky.BinderService;
 import com.shevart.androidcorelearn.utils.LogUtil;
 import com.shevart.androidcorelearn.utils.UiNotificationsUtils;
 

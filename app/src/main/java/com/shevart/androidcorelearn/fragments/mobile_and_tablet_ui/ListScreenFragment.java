@@ -55,6 +55,7 @@ public class ListScreenFragment extends Fragment implements SimpleItemsRVAdapter
         ((MobileAndTabletUIFragmentsDemoActivity) getActivity()).onItemSelected(simpleItem);
     }
 
+    @SuppressWarnings("unused")
     void updateItems(@NonNull ArrayList<SimpleItem> items) {
         adapter.update(items);
     }

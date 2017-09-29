@@ -27,6 +27,6 @@
         <activity android:name=".fragments.mobile_and_tablet_ui.DetailScreenActivity" />
 
         <service android:name=".service.service_not_sticky.NotStickyService" />
-        <service android:name=".service.service_not_sticky.BinderService" />
+        <service android:name=".service.BinderService" />
     </application>
 </manifest>
