@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.shevart.androidcorelearn.fragments.FragmentsDemoActivity;
 import com.shevart.androidcorelearn.service.ServiceLearnActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btServiceTopic:
                     startActivity(new Intent(MainActivity.this, ServiceLearnActivity.class));
                     break;
+                case R.id.btFragmentsTopic:
+                    startActivity(new Intent(MainActivity.this, FragmentsDemoActivity.class));
                 default:
                     throw new IllegalArgumentException("Handle it!");
             }
@@ -26,5 +29,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.btServiceTopic).setOnClickListener(launcherClickListener);
+        findViewById(R.id.btFragmentsTopic).setOnClickListener(launcherClickListener);
     }
 }
