@@ -1,2 +1,2 @@
 # AndroidCoreLearning
-At this project I make sample "Hello world"s for main Android classes and components for refreshing my knowledge and holding it in work state.
+This project demonstrates work with the base classes of Android. This code can be useful both for beginners - as a demonstration project, and for experienced developers - as a sandbox, in which you can quickly test a hypothesis or see in practice how a particular class works. My personal benefit from this project is the updating of knowledge and keeping them in working condition.
