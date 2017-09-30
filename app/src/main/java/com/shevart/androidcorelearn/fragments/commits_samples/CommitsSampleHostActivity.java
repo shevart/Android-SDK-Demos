@@ -40,13 +40,13 @@ public class CommitsSampleHostActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        displayCurrentLifecycleState("onCreate()");
-        tvLifecycleState = (TextView) findViewById(R.id.tvLifecycleState);
         setContentView(R.layout.activity_commits_sample_host);
+        tvLifecycleState = (TextView) findViewById(R.id.tvLifecycleState);
         findViewById(R.id.btCommit).setOnClickListener(buttonsClickListener);
         findViewById(R.id.btCommitAllowingStateLoss).setOnClickListener(buttonsClickListener);
         findViewById(R.id.btCommitNow).setOnClickListener(buttonsClickListener);
         findViewById(R.id.btCommitNowAllowingStateLoss).setOnClickListener(buttonsClickListener);
+        displayCurrentLifecycleState("onCreate()");
     }
 
     private void sampleCommit() {
@@ -99,6 +99,12 @@ public class CommitsSampleHostActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         displayCurrentLifecycleState("onDestroy()");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        displayCurrentLifecycleState("onSaveInstanceState()");
     }
 
     private void displayCurrentLifecycleState(@NonNull String currLifecycle) {
