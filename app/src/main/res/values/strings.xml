@@ -19,4 +19,7 @@
     <string name="commit_allow_state_loss">Commit Allow State Loss</string>
     <string name="commit_now">Commit Now</string>
     <string name="commit_now_allow_state_loss">Commit Now Allow State Loss</string>
+    <string name="transactions_samples">Transactions samples</string>
+    <string name="wait_few_seconds_this_screen_will_be_automatically_closed">Wait few seconds,\nthis screen will be automatically closed</string>
+    <string name="open_activity_before_commits">Open Activity before commits</string>
 </resources>

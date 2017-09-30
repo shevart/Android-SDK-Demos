@@ -8,6 +8,7 @@ import android.view.View;
 import com.shevart.androidcorelearn.R;
 import com.shevart.androidcorelearn.fragments.commits_samples.CommitsSampleHostActivity;
 import com.shevart.androidcorelearn.fragments.mobile_and_tablet_ui.MobileAndTabletUIFragmentsDemoActivity;
+import com.shevart.androidcorelearn.fragments.transactions_samples.FragmentTransactionsActivity;
 
 public class FragmentsDemoActivity extends AppCompatActivity {
     private View.OnClickListener clickListener = new View.OnClickListener() {
@@ -19,6 +20,9 @@ public class FragmentsDemoActivity extends AppCompatActivity {
                     break;
                 case R.id.btCommitsSample:
                     startActivity(new Intent(FragmentsDemoActivity.this, CommitsSampleHostActivity.class));
+                    break;
+                case R.id.btTransactionsSample:
+                    startActivity(new Intent(FragmentsDemoActivity.this, FragmentTransactionsActivity.class));
                     break;
                 default:
                     throw new IllegalArgumentException("Check it!");
@@ -32,5 +36,6 @@ public class FragmentsDemoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fragments_demo);
         findViewById(R.id.btMobileAndTabletFragmentsUi).setOnClickListener(clickListener);
         findViewById(R.id.btCommitsSample).setOnClickListener(clickListener);
+        findViewById(R.id.btTransactionsSample).setOnClickListener(clickListener);
     }
 }

@@ -10,14 +10,24 @@
         android:id="@+id/tvLifecycleState"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="21sp"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"
         android:padding="8dp" />
 
     <FrameLayout
         android:id="@+id/flCommitsContainer"
         android:layout_width="match_parent"
+        android:background="@color/blue_light"
         android:layout_height="0dp"
         android:layout_weight="1" />
+
+    <CheckBox
+        android:id="@+id/cbOpenActivityBeforeCommits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="@string/open_activity_before_commits"
+        tools:ignore="RtlSymmetry" />
 
     <include layout="@layout/element_commits_buttons_panel" />
 </LinearLayout>
