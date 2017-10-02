@@ -2,13 +2,13 @@ package com.shevart.androidcorelearn.service;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.shevart.androidcorelearn.R;
+import com.shevart.androidcorelearn.common.AbsActivity;
 import com.shevart.androidcorelearn.service.service_not_sticky.NotStickyService;
 
-public class ServiceLearnActivity extends AppCompatActivity {
+public class ServiceLearnActivity extends AbsActivity {
     private View.OnClickListener serviceClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -29,6 +29,7 @@ public class ServiceLearnActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service_learn);
+        enableToolbarBackButton();
         findViewById(R.id.btStartNotStickyService).setOnClickListener(serviceClickListener);
         findViewById(R.id.btStartBinderServiceScreen).setOnClickListener(serviceClickListener);
     }

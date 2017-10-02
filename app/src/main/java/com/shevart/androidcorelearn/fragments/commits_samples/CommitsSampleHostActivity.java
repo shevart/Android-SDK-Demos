@@ -6,12 +6,12 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.shevart.androidcorelearn.R;
+import com.shevart.androidcorelearn.common.AbsActivity;
 import com.shevart.androidcorelearn.fragments.mobile_and_tablet_ui.DetailScreenFragment;
 import com.shevart.androidcorelearn.utils.LogUtil;
 import com.shevart.androidcorelearn.utils.MockUtils;
@@ -20,7 +20,7 @@ import com.shevart.androidcorelearn.utils.UiNotificationsUtils;
 import java.lang.ref.WeakReference;
 import java.util.Locale;
 
-public class CommitsSampleHostActivity extends AppCompatActivity {
+public class CommitsSampleHostActivity extends AbsActivity {
     private static final String LIFECYCLE_PATTERN = "Current state: %s";
     @SuppressWarnings("PointlessArithmeticExpression")
     private static final long DELAY = 1000 * 1;
@@ -78,6 +78,7 @@ public class CommitsSampleHostActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_commits_sample_host);
+        enableToolbarBackButton();
         initView();
         displayCurrentLifecycleState("onCreate()");
     }

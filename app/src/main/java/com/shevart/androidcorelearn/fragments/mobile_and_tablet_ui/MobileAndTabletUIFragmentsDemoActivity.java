@@ -3,16 +3,16 @@ package com.shevart.androidcorelearn.fragments.mobile_and_tablet_ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 
 import com.shevart.androidcorelearn.R;
+import com.shevart.androidcorelearn.common.AbsActivity;
 import com.shevart.androidcorelearn.common.SimpleItem;
 import com.shevart.androidcorelearn.utils.FragmentUtil;
 import com.shevart.androidcorelearn.utils.MockUtils;
 
 import java.util.ArrayList;
 
-public class MobileAndTabletUIFragmentsDemoActivity extends AppCompatActivity {
+public class MobileAndTabletUIFragmentsDemoActivity extends AbsActivity {
     private ListScreenFragment fragmentList;
     private DetailScreenFragment fragmentDetail;
     private ArrayList<SimpleItem> items = MockUtils.SimpleItems.generateSimpleItemsList();
@@ -21,6 +21,7 @@ public class MobileAndTabletUIFragmentsDemoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mobile_and_tablet_uifragments_demo);
+        enableToolbarBackButton();
 
         final boolean isTablet = getResources().getBoolean(R.bool.is_tablet);
         fragmentList = ListScreenFragment.getInstance(items);

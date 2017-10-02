@@ -2,15 +2,15 @@ package com.shevart.androidcorelearn.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.shevart.androidcorelearn.R;
+import com.shevart.androidcorelearn.common.AbsActivity;
 import com.shevart.androidcorelearn.fragments.commits_samples.CommitsSampleHostActivity;
 import com.shevart.androidcorelearn.fragments.mobile_and_tablet_ui.MobileAndTabletUIFragmentsDemoActivity;
 import com.shevart.androidcorelearn.fragments.transactions_samples.FragmentTransactionsActivity;
 
-public class FragmentsDemoActivity extends AppCompatActivity {
+public class FragmentsDemoActivity extends AbsActivity {
     private View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -34,6 +34,7 @@ public class FragmentsDemoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragments_demo);
+        enableToolbarBackButton();
         findViewById(R.id.btMobileAndTabletFragmentsUi).setOnClickListener(clickListener);
         findViewById(R.id.btCommitsSample).setOnClickListener(clickListener);
         findViewById(R.id.btTransactionsSample).setOnClickListener(clickListener);

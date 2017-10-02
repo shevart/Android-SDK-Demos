@@ -6,15 +6,15 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioButton;
 
 import com.shevart.androidcorelearn.R;
+import com.shevart.androidcorelearn.common.AbsActivity;
 import com.shevart.androidcorelearn.utils.LogUtil;
 import com.shevart.androidcorelearn.utils.UiNotificationsUtils;
 
-public class BinderServiceActivity extends AppCompatActivity {
+public class BinderServiceActivity extends AbsActivity {
     private BinderService.MyBinder myBinder;
 
     private ServiceConnection myConnection;
@@ -26,6 +26,7 @@ public class BinderServiceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_binder_service);
+        enableToolbarBackButton();
         rbBounded = (RadioButton) findViewById(R.id.rbBounded);
         rbUnbounded = (RadioButton) findViewById(R.id.rbUnounded);
         rbUnbounded.setChecked(true);
