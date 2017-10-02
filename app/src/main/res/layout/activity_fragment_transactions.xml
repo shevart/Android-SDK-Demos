@@ -6,10 +6,22 @@
     android:orientation="vertical"
     tools:context="com.shevart.androidcorelearn.fragments.transactions_samples.FragmentTransactionsActivity">
 
+    <TextView
+        android:id="@+id/tvBackStackState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="13sp" />
+
     <FrameLayout
         android:id="@+id/flTransactionsContainer"
         android:layout_width="match_parent"
+        android:background="@color/blue_light"
         android:layout_height="0dp"
         android:layout_weight="1"/>
+
+
+    <include layout="@layout/element_fragment_transaction_control_panel" />
 
 </LinearLayout>

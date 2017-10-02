@@ -5,20 +5,20 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.shevart.androidcorelearn.R;
 import com.shevart.androidcorelearn.common.AbsActivity;
-import com.shevart.androidcorelearn.fragments.mobile_and_tablet_ui.DetailScreenFragment;
+import com.shevart.androidcorelearn.common.AutoClosableActivity;
 import com.shevart.androidcorelearn.utils.LogUtil;
-import com.shevart.androidcorelearn.utils.MockUtils;
 import com.shevart.androidcorelearn.utils.UiNotificationsUtils;
 
 import java.lang.ref.WeakReference;
 import java.util.Locale;
+
+import static com.shevart.androidcorelearn.utils.UiScreenMockUtils.nextDetailSimpleItemFragment;
 
 public class CommitsSampleHostActivity extends AbsActivity {
     private static final String LIFECYCLE_PATTERN = "Current state: %s";
@@ -33,7 +33,7 @@ public class CommitsSampleHostActivity extends AbsActivity {
         @Override
         public void onClick(View v) {
             if (cbOpenActivityBeforeCommits.isChecked()) {
-                startActivity(new Intent(CommitsSampleHostActivity.this, AutoClosableActivityActivity.class));
+                startActivity(new Intent(CommitsSampleHostActivity.this, AutoClosableActivity.class));
                 switch (v.getId()) {
                     case R.id.btCommit:
                         commitsHandler.sendEmptyMessageDelayed(CommitsHandler.WHAT_COMMIT, DELAY);
@@ -92,16 +92,13 @@ public class CommitsSampleHostActivity extends AbsActivity {
         findViewById(R.id.btCommitNowAllowingStateLoss).setOnClickListener(buttonsClickListener);
     }
 
-    private Fragment nextFragment() {
-        return DetailScreenFragment.getInstance(
-                MockUtils.SimpleItems.generateSimpleItem());
-    }
+
 
     private void sampleCommit() {
         UiNotificationsUtils.showDevMessage(this, "sampleCommit()");
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.flCommitsContainer, nextFragment())
+                .replace(R.id.flCommitsContainer, nextDetailSimpleItemFragment())
                 .commit();
     }
 
@@ -109,7 +106,7 @@ public class CommitsSampleHostActivity extends AbsActivity {
         UiNotificationsUtils.showDevMessage(this, "sampleCommitAllowingStateLoss()");
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.flCommitsContainer, nextFragment())
+                .replace(R.id.flCommitsContainer, nextDetailSimpleItemFragment())
                 .commitAllowingStateLoss();
     }
 
@@ -117,7 +114,7 @@ public class CommitsSampleHostActivity extends AbsActivity {
         UiNotificationsUtils.showDevMessage(this, "sampleCommitNow()");
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.flCommitsContainer, nextFragment())
+                .replace(R.id.flCommitsContainer, nextDetailSimpleItemFragment())
                 .commitNow();
     }
 
@@ -125,7 +122,7 @@ public class CommitsSampleHostActivity extends AbsActivity {
         UiNotificationsUtils.showDevMessage(this, "sampleCommitNowAllowingStateLoss()");
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.flCommitsContainer, nextFragment())
+                .replace(R.id.flCommitsContainer, nextDetailSimpleItemFragment())
                 .commitNowAllowingStateLoss();
     }
 

@@ -22,4 +22,9 @@
     <string name="transactions_samples">Transactions samples</string>
     <string name="wait_few_seconds_this_screen_will_be_automatically_closed">Wait few seconds,\nthis screen will be automatically closed</string>
     <string name="open_activity_before_commits">Open Activity before commits</string>
+    <string name="all_operations_will_be_execute_by">All operations will be execute by commit()</string>
+    <string name="remove">Remove</string>
+    <string name="replace">Replace</string>
+    <string name="add">Add</string>
+    <string name="add_to_back_stack">Add to back stack</string>
 </resources>

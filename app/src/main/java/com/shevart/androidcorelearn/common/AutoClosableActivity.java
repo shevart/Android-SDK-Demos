@@ -1,4 +1,4 @@
-package com.shevart.androidcorelearn.fragments.commits_samples;
+package com.shevart.androidcorelearn.common;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -8,13 +8,13 @@ import com.shevart.androidcorelearn.R;
 import com.shevart.androidcorelearn.utils.UiNotificationsUtils;
 
 // todo temp decision, review it
-public class AutoClosableActivityActivity extends AppCompatActivity {
+public class AutoClosableActivity extends AppCompatActivity {
     private static final long DELAY = 1000 * 3; // 3 secs
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_auto_closable_activity);
+        setContentView(R.layout.activity_auto_closable);
 
         final Handler handler = new Handler(getMainLooper());
         handler.postDelayed(new Runnable() {

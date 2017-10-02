@@ -31,7 +31,7 @@
             android:name=".fragments.transactions_samples.FragmentTransactionsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".fragments.commits_samples.AutoClosableActivityActivity"
+            android:name=".common.AutoClosableActivity"
             android:screenOrientation="portrait" />
 
         <service android:name=".service.service_not_sticky.NotStickyService" />
