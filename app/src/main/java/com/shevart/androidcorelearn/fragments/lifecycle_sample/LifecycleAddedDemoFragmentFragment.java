@@ -23,7 +23,7 @@ public class LifecycleAddedDemoFragmentFragment extends BaseLifecycleLogsFragmen
     }
 
     @Override
-    protected String provideTag() {
+    protected String provideFragmentName() {
         return TAG;
     }
 }

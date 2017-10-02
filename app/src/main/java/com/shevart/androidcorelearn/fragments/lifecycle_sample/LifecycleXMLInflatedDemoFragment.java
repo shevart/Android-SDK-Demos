@@ -22,7 +22,7 @@ public class LifecycleXMLInflatedDemoFragment extends BaseLifecycleLogsFragment 
     }
 
     @Override
-    protected String provideTag() {
+    protected String provideFragmentName() {
         return TAG;
     }
 }

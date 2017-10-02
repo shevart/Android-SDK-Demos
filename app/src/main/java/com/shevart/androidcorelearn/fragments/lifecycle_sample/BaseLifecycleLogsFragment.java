@@ -12,13 +12,9 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.shevart.androidcorelearn.utils.LogUtil;
-
-import java.util.Locale;
+import com.shevart.androidcorelearn.utils.LifecycleLogUtil;
 
 public abstract class BaseLifecycleLogsFragment extends Fragment {
-    private static final String LOG_PATTERN = "<--%s-->: %s";
-
     public BaseLifecycleLogsFragment() {
 
     }
@@ -132,8 +128,8 @@ public abstract class BaseLifecycleLogsFragment extends Fragment {
      * @param msg - String which will be print in logs
      */
     protected void logMessage(@NonNull String msg) {
-        LogUtil.e(String.format(Locale.ENGLISH, LOG_PATTERN, provideTag(), msg));
+        LifecycleLogUtil.logMessage(provideFragmentName(), msg);
     }
 
-    protected abstract String provideTag();
+    protected abstract String provideFragmentName();
 }
