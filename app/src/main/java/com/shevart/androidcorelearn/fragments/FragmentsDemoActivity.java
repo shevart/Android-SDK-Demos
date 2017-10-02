@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.shevart.androidcorelearn.R;
 import com.shevart.androidcorelearn.common.AbsActivity;
+import com.shevart.androidcorelearn.fragments.back_stack_sample.FragmentsBackStackSampleActivity;
 import com.shevart.androidcorelearn.fragments.commits_samples.CommitsSampleHostActivity;
 import com.shevart.androidcorelearn.fragments.mobile_and_tablet_ui.MobileAndTabletUIFragmentsDemoActivity;
 import com.shevart.androidcorelearn.fragments.transactions_samples.FragmentTransactionsActivity;
@@ -24,6 +25,9 @@ public class FragmentsDemoActivity extends AbsActivity {
                 case R.id.btTransactionsSample:
                     startActivity(new Intent(FragmentsDemoActivity.this, FragmentTransactionsActivity.class));
                     break;
+                case R.id.btBackStackSample:
+                    startActivity(new Intent(FragmentsDemoActivity.this, FragmentsBackStackSampleActivity.class));
+                    break;
                 default:
                     throw new IllegalArgumentException("Check it!");
             }
@@ -38,5 +42,6 @@ public class FragmentsDemoActivity extends AbsActivity {
         findViewById(R.id.btMobileAndTabletFragmentsUi).setOnClickListener(clickListener);
         findViewById(R.id.btCommitsSample).setOnClickListener(clickListener);
         findViewById(R.id.btTransactionsSample).setOnClickListener(clickListener);
+        findViewById(R.id.btBackStackSample).setOnClickListener(clickListener);
     }
 }

@@ -26,12 +26,20 @@
         android:id="@+id/btCommitsSample"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="@string/commits_samples" />
+
     <Button
         android:id="@+id/btTransactionsSample"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="@string/transactions_samples" />
+
+    <Button
+        android:id="@+id/btBackStackSample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/backstack_sample" />
 </LinearLayout>
