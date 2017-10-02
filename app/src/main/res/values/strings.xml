@@ -27,4 +27,8 @@
     <string name="replace">Replace</string>
     <string name="add">Add</string>
     <string name="add_to_back_stack">Add to back stack</string>
+    <string name="enter_backstack_name">Enter backStack name</string>
+    <string name="add_fragment">Add fragment</string>
+    <string name="remove_by_backstack_name">Remove by BackStack name</string>
+    <string name="put_new_fragment">Put new fragment</string>
 </resources>

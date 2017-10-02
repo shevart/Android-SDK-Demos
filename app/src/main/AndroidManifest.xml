@@ -31,6 +31,9 @@
             android:name=".fragments.transactions_samples.FragmentTransactionsActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".fragments.back_stack_sample.FragmentsBackStackSampleActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".common.AutoClosableActivity"
             android:screenOrientation="portrait" />
 

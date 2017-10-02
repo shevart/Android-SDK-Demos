@@ -31,10 +31,10 @@ public class FragmentTransactionsActivity extends AbsActivity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.btAdd:
-                    add(obtainFragment(), cbAddToBackStack.isChecked());
+                    add(nextFragment(), cbAddToBackStack.isChecked());
                     break;
                 case R.id.btReplace:
-                    replace(obtainFragment(), cbAddToBackStack.isChecked());
+                    replace(nextFragment(), cbAddToBackStack.isChecked());
                     break;
                 case R.id.btRemove:
                     remove(fragmentQueue.poll(), cbAddToBackStack.isChecked());
@@ -45,7 +45,7 @@ public class FragmentTransactionsActivity extends AbsActivity {
         }
     };
 
-    private Fragment obtainFragment() {
+    private Fragment nextFragment() {
         Fragment fragment = nextDetailSimpleItemFragment();
         fragmentQueue.add(fragment);
         return fragment;

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.shevart.androidcorelearn.fragments.back_stack_sample.FragmentsBackStackSampleActivity">
+
+    <TextView
+        android:id="@+id/tvBackStackState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="13sp" />
+
+    <FrameLayout
+        android:id="@+id/flBackStackContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include layout="@layout/element_fragments_back_stack_control_panel" />
+
+</LinearLayout>
