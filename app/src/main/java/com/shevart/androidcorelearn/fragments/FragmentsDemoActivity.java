@@ -8,6 +8,7 @@ import com.shevart.androidcorelearn.R;
 import com.shevart.androidcorelearn.common.AbsActivity;
 import com.shevart.androidcorelearn.fragments.back_stack_sample.FragmentsBackStackSampleActivity;
 import com.shevart.androidcorelearn.fragments.commits_samples.CommitsSampleHostActivity;
+import com.shevart.androidcorelearn.fragments.lifecycle_sample.FragmentLifecycleDemoActivity;
 import com.shevart.androidcorelearn.fragments.mobile_and_tablet_ui.MobileAndTabletUIFragmentsDemoActivity;
 import com.shevart.androidcorelearn.fragments.transactions_samples.FragmentTransactionsActivity;
 
@@ -16,6 +17,9 @@ public class FragmentsDemoActivity extends AbsActivity {
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
+                case R.id.btFragmentsLifecycle:
+                    startActivity(new Intent(FragmentsDemoActivity.this, FragmentLifecycleDemoActivity.class));
+                    break;
                 case R.id.btMobileAndTabletFragmentsUi:
                     startActivity(new Intent(FragmentsDemoActivity.this, MobileAndTabletUIFragmentsDemoActivity.class));
                     break;
@@ -39,6 +43,7 @@ public class FragmentsDemoActivity extends AbsActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragments_demo);
         enableToolbarBackButton();
+        findViewById(R.id.btFragmentsLifecycle).setOnClickListener(clickListener);
         findViewById(R.id.btMobileAndTabletFragmentsUi).setOnClickListener(clickListener);
         findViewById(R.id.btCommitsSample).setOnClickListener(clickListener);
         findViewById(R.id.btTransactionsSample).setOnClickListener(clickListener);

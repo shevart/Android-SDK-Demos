@@ -34,4 +34,7 @@
     <string name="backstack_sample">BackStack Sample</string>
     <string name="to_unlock_buttons_enter_backstack_name">To unlock buttons enter backStack name</string>
     <string name="is_set_flag_pop_back_stack_inclusive">Is set flag POP_BACK_STACK_INCLUSIVE</string>
+    <string name="fragment_from_xml">Fragment from XML</string>
+    <string name="fragment_which_added_programmatically">Fragment which added programmatically</string>
+    <string name="fragment_lifecycle">Fragment lifecycle</string>
 </resources>

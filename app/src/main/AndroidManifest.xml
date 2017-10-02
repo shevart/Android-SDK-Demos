@@ -36,10 +36,9 @@
         <activity
             android:name=".common.AutoClosableActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".fragments.lifecycle_sample.FragmentLifecycleDemoActivity" />
 
         <service android:name=".service.service_not_sticky.NotStickyService" />
         <service android:name=".service.BinderService" />
-
     </application>
-
 </manifest>
