@@ -40,4 +40,7 @@
     <string name="multi_threads_topic">Multi-threads topic:</string>
     <string name="simple_threads">Simple threads</string>
     <string name="handler_and_looper">Handler and Looper</string>
+    <string name="services">Services</string>
+    <string name="fragments">Fragments</string>
+    <string name="multi_threads">Multi threads</string>
 </resources>

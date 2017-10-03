@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.shevart.androidcorelearn.fragments.FragmentsDemoActivity;
+import com.shevart.androidcorelearn.multi_threading.MultiThreadingDemoActivity;
 import com.shevart.androidcorelearn.service.ServiceLearnActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btFragmentsTopic:
                     startActivity(new Intent(MainActivity.this, FragmentsDemoActivity.class));
                     break;
+                case R.id.btMultiThreads:
+                    startActivity(new Intent(MainActivity.this, MultiThreadingDemoActivity.class));
+                    break;
                 default:
                     throw new IllegalArgumentException("Handle it!");
             }
@@ -31,5 +35,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         findViewById(R.id.btServiceTopic).setOnClickListener(launcherClickListener);
         findViewById(R.id.btFragmentsTopic).setOnClickListener(launcherClickListener);
+        findViewById(R.id.btMultiThreads).setOnClickListener(launcherClickListener);
     }
 }

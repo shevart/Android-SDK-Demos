@@ -27,7 +27,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="24dp"
-        android:text="Services"
+        android:text="@string/services"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -39,9 +39,21 @@
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
         android:layout_marginTop="8dp"
-        android:text="Fragments"
+        android:text="@string/fragments"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/btServiceTopic"
         app:layout_constraintRight_toRightOf="@+id/btServiceTopic"
         app:layout_constraintTop_toBottomOf="@+id/btServiceTopic" />
+
+    <Button
+        android:id="@+id/btMultiThreads"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/multi_threads"
+        app:layout_constraintLeft_toLeftOf="@+id/btFragmentsTopic"
+        app:layout_constraintRight_toRightOf="@+id/btFragmentsTopic"
+        app:layout_constraintTop_toBottomOf="@+id/btFragmentsTopic" />
 </android.support.constraint.ConstraintLayout>
