@@ -37,4 +37,7 @@
     <string name="fragment_from_xml">Fragment from XML</string>
     <string name="fragment_which_added_programmatically">Fragment which added programmatically</string>
     <string name="fragment_lifecycle">Fragment lifecycle</string>
+    <string name="multi_threads_topic">Multi-threads topic:</string>
+    <string name="simple_threads">Simple threads</string>
+    <string name="handler_and_looper">Handler and Looper</string>
 </resources>

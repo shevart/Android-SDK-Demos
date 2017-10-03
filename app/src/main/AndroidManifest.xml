@@ -37,8 +37,16 @@
             android:name=".common.AutoClosableActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".fragments.lifecycle_sample.FragmentLifecycleDemoActivity" />
+        <activity android:name=".multi_threading.MultiThreadingDemoActivity" />
+        <activity
+            android:name=".multi_threading.simple_threads.SimpleThreadsSampleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".multi_threading.handler_looper.HandlerLooperSampleActivity"
+            android:screenOrientation="portrait" />
 
         <service android:name=".service.service_not_sticky.NotStickyService" />
         <service android:name=".service.BinderService" />
     </application>
+
 </manifest>
