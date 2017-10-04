@@ -10,6 +10,7 @@ import com.shevart.androidcorelearn.utils.UiNotificationsUtils;
 
 public class SimpleThreadsSampleActivity extends AbsActivity {
     private DemoStartable waitNotifyDemo = new WaitNotifyThreadsSimpleDemo();
+    private DemoStartable stopThreadDemo = new StopThreadSimpleDemo();
 
     private View.OnClickListener buttonsClickListener = new View.OnClickListener() {
         @Override
@@ -19,7 +20,9 @@ public class SimpleThreadsSampleActivity extends AbsActivity {
                 case R.id.btWaitNotifyDemo:
                     waitNotifyDemo.startDemo();
                     break;
-
+                case R.id.btStoppingThread:
+                    stopThreadDemo.startDemo();
+                    break;
                 default:
                     throw new IllegalArgumentException("Check it!");
             }
@@ -33,5 +36,6 @@ public class SimpleThreadsSampleActivity extends AbsActivity {
         enableToolbarBackButton();
 
         findViewById(R.id.btWaitNotifyDemo).setOnClickListener(buttonsClickListener);
+        findViewById(R.id.btStoppingThread).setOnClickListener(buttonsClickListener);
     }
 }

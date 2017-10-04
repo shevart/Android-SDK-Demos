@@ -23,10 +23,10 @@
         android:text="@string/wait_and_notify" />
 
     <Button
-        android:id="@+id/btSomethingElse"
+        android:id="@+id/btStoppingThread"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Make it!" />
+        android:text="@string/stopping_thread" />
 
 </LinearLayout>
