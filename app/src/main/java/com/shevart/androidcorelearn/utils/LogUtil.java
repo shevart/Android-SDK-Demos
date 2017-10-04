@@ -11,6 +11,10 @@ public class LogUtil {
         Log.e(TAG, e);
     }
 
+    public static void empty() {
+        Log.e(TAG, "");
+    }
+
     public static void e(@NonNull Throwable e) {
         e.printStackTrace();
     }

@@ -43,4 +43,5 @@
     <string name="services">Services</string>
     <string name="fragments">Fragments</string>
     <string name="multi_threads">Multi threads</string>
+    <string name="wait_and_notify">Wait() and notify()</string>
 </resources>
