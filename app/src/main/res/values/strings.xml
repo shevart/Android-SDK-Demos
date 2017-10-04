@@ -45,4 +45,5 @@
     <string name="multi_threads">Multi threads</string>
     <string name="wait_and_notify">Wait() and notify()</string>
     <string name="stopping_thread">Stopping thread</string>
+    <string name="alive_and_join">alive() and join()</string>
 </resources>

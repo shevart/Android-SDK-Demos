@@ -11,6 +11,7 @@ import com.shevart.androidcorelearn.utils.UiNotificationsUtils;
 public class SimpleThreadsSampleActivity extends AbsActivity {
     private DemoStartable waitNotifyDemo = new WaitNotifyThreadsSimpleDemo();
     private DemoStartable stopThreadDemo = new StopThreadSimpleDemo();
+    private DemoStartable aliveJoinDemo = new AliveJoinDemo();
 
     private View.OnClickListener buttonsClickListener = new View.OnClickListener() {
         @Override
@@ -22,6 +23,9 @@ public class SimpleThreadsSampleActivity extends AbsActivity {
                     break;
                 case R.id.btStoppingThread:
                     stopThreadDemo.startDemo();
+                    break;
+                case R.id.btAliveJoin:
+                    aliveJoinDemo.startDemo();
                     break;
                 default:
                     throw new IllegalArgumentException("Check it!");
@@ -37,5 +41,6 @@ public class SimpleThreadsSampleActivity extends AbsActivity {
 
         findViewById(R.id.btWaitNotifyDemo).setOnClickListener(buttonsClickListener);
         findViewById(R.id.btStoppingThread).setOnClickListener(buttonsClickListener);
+        findViewById(R.id.btAliveJoin).setOnClickListener(buttonsClickListener);
     }
 }
