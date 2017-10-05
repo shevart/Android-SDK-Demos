@@ -8,9 +8,18 @@ import java.util.concurrent.Executor;
  * <h3>Developer comment</h3>
  * This class make your code shorter, without unnecessary try-catch block for {@link InterruptedException}
  */
+@SuppressWarnings("WeakerAccess")
 public class ThreadUtil {
     public static void sendEmptyTasksToExecutor5(@NonNull Executor executor) {
         sendEmptyTasksToExecutor(executor, 5);
+    }
+
+    public static void sendEmptyTasksToExecutor50(@NonNull Executor executor) {
+        sendEmptyTasksToExecutor(executor, 50);
+    }
+
+    public static void sleep50ms() {
+        sleep(50);
     }
 
     public static void sleep500ms() {
@@ -43,7 +52,8 @@ public class ThreadUtil {
         return new Runnable() {
             @Override
             public void run() {
-                LogUtil.e("TaskId: " + taskId);
+                sleep50ms();
+                LogUtil.e("TaskId: " + taskId + ", thread name is: " + Thread.currentThread().getName());
             }
         };
     }

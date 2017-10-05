@@ -12,4 +12,9 @@
         android:id="@+id/btSimpleQueueExecutor"
         style="@style/ACLBaseWidget.Button.OpenTopic"
         android:text="@string/simple_queue_executor" />
+
+    <Button
+        android:id="@+id/btFixedThreadPool"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="Fixed thread pool" />
 </LinearLayout>
