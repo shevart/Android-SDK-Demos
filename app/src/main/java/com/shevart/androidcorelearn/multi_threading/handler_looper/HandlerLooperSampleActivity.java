@@ -7,6 +7,7 @@ import android.view.View;
 import com.shevart.androidcorelearn.R;
 import com.shevart.androidcorelearn.common.AbsActivity;
 import com.shevart.androidcorelearn.multi_threading.handler_looper.handler_background_worker_sample.HandlerBackgroundWorkerSampleActivity;
+import com.shevart.androidcorelearn.multi_threading.handler_looper.handler_delayed_messages.HandlerDelayedActivity;
 
 public class HandlerLooperSampleActivity extends AbsActivity {
     private View.OnClickListener buttonsClickListener = new View.OnClickListener() {
@@ -15,6 +16,9 @@ public class HandlerLooperSampleActivity extends AbsActivity {
             switch (v.getId()) {
                 case R.id.btSimpleHandlerSample:
                     startActivity(new Intent(HandlerLooperSampleActivity.this, HandlerBackgroundWorkerSampleActivity.class));
+                    break;
+                case R.id.btDelayedMessagesSample:
+                    startActivity(new Intent(HandlerLooperSampleActivity.this, HandlerDelayedActivity.class));
                     break;
                 default:
                     throw new IllegalArgumentException("Check it!");
@@ -29,5 +33,6 @@ public class HandlerLooperSampleActivity extends AbsActivity {
         enableToolbarBackButton();
 
         findViewById(R.id.btSimpleHandlerSample).setOnClickListener(buttonsClickListener);
+        findViewById(R.id.btDelayedMessagesSample).setOnClickListener(buttonsClickListener);
     }
 }

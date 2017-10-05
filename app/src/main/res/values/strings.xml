@@ -48,4 +48,8 @@
     <string name="alive_and_join">alive() and join()</string>
     <string name="run_job">Run job</string>
     <string name="simple_handler_sample">Simple handler sample</string>
+    <string name="set_delay_time_in_seconds">Set delay time in seconds</string>
+    <string name="send_message_with_delay">Send message with delay</string>
+    <string name="write_your_message">Write your message...</string>
+    <string name="delayed_msg_sample">Delayed messages sample</string>
 </resources>

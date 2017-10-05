@@ -13,4 +13,8 @@
         style="@style/ACLBaseWidget.Button.OpenTopic"
         android:text="@string/simple_handler_sample"/>
 
+    <Button
+        android:id="@+id/btDelayedMessagesSample"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/delayed_msg_sample"/>
 </LinearLayout>
