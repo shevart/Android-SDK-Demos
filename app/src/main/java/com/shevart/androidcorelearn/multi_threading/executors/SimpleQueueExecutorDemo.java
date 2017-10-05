@@ -1,7 +1,7 @@
 package com.shevart.androidcorelearn.multi_threading.executors;
 
 import com.shevart.androidcorelearn.common.DemoStartable;
-import com.shevart.androidcorelearn.utils.LogUtil;
+import com.shevart.androidcorelearn.utils.ThreadUtil;
 
 class SimpleQueueExecutorDemo implements DemoStartable {
     private SimpleAsyncQueueExecutor simpleAsyncQueueExecutor;
@@ -12,17 +12,6 @@ class SimpleQueueExecutorDemo implements DemoStartable {
             simpleAsyncQueueExecutor = new SimpleAsyncQueueExecutor();
         }
 
-        for (int i = 0; i < 5; i++) {
-            simpleAsyncQueueExecutor.execute(nextTask(i));
-        }
-    }
-
-    private static Runnable nextTask(final int taskId) {
-        return new Runnable() {
-            @Override
-            public void run() {
-                LogUtil.e("TaskId: " + taskId);
-            }
-        };
+        ThreadUtil.sendEmptyTasksToExecutor5(simpleAsyncQueueExecutor);
     }
 }
