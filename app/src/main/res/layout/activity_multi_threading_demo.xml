@@ -17,4 +17,9 @@
         android:id="@+id/btHandlerLooper"
         style="@style/ACLBaseWidget.Button.OpenTopic"
         android:text="@string/handler_and_looper" />
+
+    <Button
+        android:id="@+id/btExecutors"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/executors" />
 </LinearLayout>

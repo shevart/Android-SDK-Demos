@@ -16,7 +16,7 @@ public class SimpleThreadsSampleActivity extends AbsActivity {
     private View.OnClickListener buttonsClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            UiNotificationsUtils.showDevMessage(SimpleThreadsSampleActivity.this, "Developer, go to logs!");
+            UiNotificationsUtils.Extra.developerSeeToLogsMsg(SimpleThreadsSampleActivity.this);
             switch (v.getId()) {
                 case R.id.btWaitNotifyDemo:
                     waitNotifyDemo.startDemo();

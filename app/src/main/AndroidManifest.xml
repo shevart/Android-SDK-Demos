@@ -50,6 +50,9 @@
         <activity
             android:name=".multi_threading.handler_looper.handler_delayed_messages.HandlerDelayedActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".multi_threading.executors.ExecutorsDemoActivity"
+            android:screenOrientation="portrait" />
 
         <service android:name=".service.service_not_sticky.NotStickyService" />
         <service android:name=".service.BinderService" />

@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.shevart.androidcorelearn.R;
 import com.shevart.androidcorelearn.common.AbsActivity;
+import com.shevart.androidcorelearn.multi_threading.executors.ExecutorsDemoActivity;
 import com.shevart.androidcorelearn.multi_threading.handler_looper.HandlerLooperSampleActivity;
 import com.shevart.androidcorelearn.multi_threading.simple_threads.SimpleThreadsSampleActivity;
 
@@ -20,6 +21,9 @@ public class MultiThreadingDemoActivity extends AbsActivity {
                 case R.id.btHandlerLooper:
                     startActivity(new Intent(MultiThreadingDemoActivity.this, HandlerLooperSampleActivity.class));
                     break;
+                case R.id.btExecutors:
+                    startActivity(new Intent(MultiThreadingDemoActivity.this, ExecutorsDemoActivity.class));
+                    break;
                 default:
                     throw new IllegalArgumentException("Check it!");
             }
@@ -33,5 +37,6 @@ public class MultiThreadingDemoActivity extends AbsActivity {
         enableToolbarBackButton();
         findViewById(R.id.btSimpleThreads).setOnClickListener(buttonsClickListener);
         findViewById(R.id.btHandlerLooper).setOnClickListener(buttonsClickListener);
+        findViewById(R.id.btExecutors).setOnClickListener(buttonsClickListener);
     }
 }

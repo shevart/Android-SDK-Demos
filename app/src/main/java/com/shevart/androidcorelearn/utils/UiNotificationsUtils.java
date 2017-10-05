@@ -21,4 +21,10 @@ public class UiNotificationsUtils {
             LogUtil.e(msg);
         }
     }
+
+    public static class Extra {
+        public static void developerSeeToLogsMsg(@NonNull Context context) {
+            showDevMessage(context, "Developer, go to logs!");
+        }
+    }
 }

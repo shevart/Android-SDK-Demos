@@ -52,4 +52,7 @@
     <string name="send_message_with_delay">Send message with delay</string>
     <string name="write_your_message">Write your message...</string>
     <string name="delayed_msg_sample">Delayed messages sample</string>
+    <string name="executors_section">Executors section</string>
+    <string name="simple_queue_executor">Simple Queue Executor</string>
+    <string name="executors">Executors</string>
 </resources>
