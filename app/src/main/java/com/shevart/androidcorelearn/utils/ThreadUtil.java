@@ -6,16 +6,20 @@ package com.shevart.androidcorelearn.utils;
  */
 public class ThreadUtil {
     public static void sleep500ms() {
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep(500);
+    }
+
+    public static void sleep1000ms() {
+        sleep(1000);
     }
 
     public static void sleep2000ms() {
+        sleep(2000);
+    }
+
+    private static void sleep(long ms) {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(ms);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

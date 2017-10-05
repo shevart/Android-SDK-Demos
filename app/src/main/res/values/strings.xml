@@ -46,4 +46,6 @@
     <string name="wait_and_notify">Wait() and notify()</string>
     <string name="stopping_thread">Stopping thread</string>
     <string name="alive_and_join">alive() and join()</string>
+    <string name="run_job">Run job</string>
+    <string name="simple_handler_sample">Simple handler sample</string>
 </resources>
