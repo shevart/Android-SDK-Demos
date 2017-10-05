@@ -9,11 +9,8 @@
     tools:context="com.shevart.androidcorelearn.multi_threading.simple_threads.SimpleThreadsSampleActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/simple_threads"
-        android:textSize="21sp" />
+        style="@style/ACLBaseWidget.TextView.TopicTitle.Sub"
+        android:text="@string/simple_threads" />
 
     <Button
         android:id="@+id/btWaitNotifyDemo"

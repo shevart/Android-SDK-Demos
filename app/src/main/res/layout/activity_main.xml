@@ -1,59 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/ACLBaseWidget.LinearLayout.TopicMenu"
     tools:context="com.shevart.androidcorelearn.MainActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:textColor="@android:color/black"
-        android:textSize="27sp"
-        android:layout_marginTop="32dp"
-        android:text="@string/select_topic"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        style="@style/ACLBaseWidget.TextView.TopicTitle"
+        android:text="@string/select_topic" />
 
     <Button
         android:id="@+id/btServiceTopic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/services"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/services" />
 
     <Button
         android:id="@+id/btFragmentsTopic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/fragments"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/btServiceTopic"
-        app:layout_constraintRight_toRightOf="@+id/btServiceTopic"
-        app:layout_constraintTop_toBottomOf="@+id/btServiceTopic" />
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/fragments" />
 
     <Button
         android:id="@+id/btMultiThreads"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/multi_threads"
-        app:layout_constraintLeft_toLeftOf="@+id/btFragmentsTopic"
-        app:layout_constraintRight_toRightOf="@+id/btFragmentsTopic"
-        app:layout_constraintTop_toBottomOf="@+id/btFragmentsTopic" />
-</android.support.constraint.ConstraintLayout>
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/multi_threads" />
+</LinearLayout>

@@ -1,31 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:padding="16dp"
+    style="@style/ACLBaseWidget.LinearLayout.TopicMenu"
     tools:context="com.shevart.androidcorelearn.multi_threading.MultiThreadingDemoActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/multi_threads_topic"
-        android:textSize="21sp" />
+        style="@style/ACLBaseWidget.TextView.TopicTitle.Sub"
+        android:text="@string/multi_threads_topic" />
 
     <Button
         android:id="@+id/btSimpleThreads"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
         android:text="@string/simple_threads" />
 
     <Button
         android:id="@+id/btHandlerLooper"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
         android:text="@string/handler_and_looper" />
 </LinearLayout>
