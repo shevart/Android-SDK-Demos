@@ -33,6 +33,7 @@ public class ExecutorsDemoActivity extends AbsActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_executors_demo);
+        enableToolbarBackButton();
 
         findViewById(R.id.btSimpleQueueExecutor).setOnClickListener(buttonsClickListener);
         findViewById(R.id.btFixedThreadPool).setOnClickListener(buttonsClickListener);

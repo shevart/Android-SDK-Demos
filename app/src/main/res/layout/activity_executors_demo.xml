@@ -16,5 +16,5 @@
     <Button
         android:id="@+id/btFixedThreadPool"
         style="@style/ACLBaseWidget.Button.OpenTopic"
-        android:text="Fixed thread pool" />
+        android:text="@string/fixed_thread_pool" />
 </LinearLayout>
