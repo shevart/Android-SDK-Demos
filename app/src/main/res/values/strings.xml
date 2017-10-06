@@ -56,4 +56,5 @@
     <string name="simple_queue_executor">Simple Queue Executor</string>
     <string name="executors">Executors</string>
     <string name="fixed_thread_pool">Fixed thread pool</string>
+    <string name="single_thread_executor">Single thread executor</string>
 </resources>

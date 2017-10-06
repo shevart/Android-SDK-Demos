@@ -11,6 +11,7 @@ import com.shevart.androidcorelearn.utils.UiNotificationsUtils;
 public class ExecutorsDemoActivity extends AbsActivity {
     private DemoStartable asyncQueueExecutorDemo = new SimpleQueueExecutorDemo();
     private DemoStartable fixedThreadPoolDemo = new FixedThreadPoolDemo();
+    private DemoStartable singleThreadExecutor = new SingleThreadExecutorDemo();
 
     private View.OnClickListener buttonsClickListener = new View.OnClickListener() {
         @Override
@@ -22,6 +23,9 @@ public class ExecutorsDemoActivity extends AbsActivity {
                     break;
                 case R.id.btFixedThreadPool:
                     fixedThreadPoolDemo.startDemo();
+                    break;
+                case R.id.btSingleThreadExecutor:
+                    singleThreadExecutor.startDemo();
                     break;
                 default:
                     throw new IllegalArgumentException("Check it!");
@@ -37,5 +41,6 @@ public class ExecutorsDemoActivity extends AbsActivity {
 
         findViewById(R.id.btSimpleQueueExecutor).setOnClickListener(buttonsClickListener);
         findViewById(R.id.btFixedThreadPool).setOnClickListener(buttonsClickListener);
+        findViewById(R.id.btSingleThreadExecutor).setOnClickListener(buttonsClickListener);
     }
 }

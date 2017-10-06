@@ -17,4 +17,9 @@
         android:id="@+id/btFixedThreadPool"
         style="@style/ACLBaseWidget.Button.OpenTopic"
         android:text="@string/fixed_thread_pool" />
+
+    <Button
+        android:id="@+id/btSingleThreadExecutor"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/single_thread_executor" />
 </LinearLayout>
