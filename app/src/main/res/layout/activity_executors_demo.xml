@@ -27,4 +27,9 @@
         android:id="@+id/btAllExecutorServiceMethods"
         style="@style/ACLBaseWidget.Button.OpenTopic"
         android:text="@string/all_executor_service_methods" />
+
+    <Button
+        android:id="@+id/btFutureTask"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/future_task_demo" />
 </LinearLayout>

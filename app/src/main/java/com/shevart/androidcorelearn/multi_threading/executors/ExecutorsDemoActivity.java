@@ -13,6 +13,7 @@ public class ExecutorsDemoActivity extends AbsActivity {
     private DemoStartable fixedThreadPoolDemo = new FixedThreadPoolDemo();
     private DemoStartable singleThreadExecutorDemo = new SingleThreadExecutorDemo();
     private DemoStartable allExecutorServiceMethodsDemo = new AllExecutorServiceMethodsDemo();
+    private DemoStartable futureTaskDemo = new FutureTaskDemo();
 
     private View.OnClickListener buttonsClickListener = new View.OnClickListener() {
         @Override
@@ -31,6 +32,9 @@ public class ExecutorsDemoActivity extends AbsActivity {
                 case R.id.btAllExecutorServiceMethods:
                     allExecutorServiceMethodsDemo.startDemo();
                     break;
+                case R.id.btFutureTask:
+                    futureTaskDemo.startDemo();
+                    break;
                 default:
                     throw new IllegalArgumentException("Check it!");
             }
@@ -47,5 +51,6 @@ public class ExecutorsDemoActivity extends AbsActivity {
         findViewById(R.id.btFixedThreadPool).setOnClickListener(buttonsClickListener);
         findViewById(R.id.btSingleThreadExecutor).setOnClickListener(buttonsClickListener);
         findViewById(R.id.btAllExecutorServiceMethods).setOnClickListener(buttonsClickListener);
+        findViewById(R.id.btFutureTask).setOnClickListener(buttonsClickListener);
     }
 }
