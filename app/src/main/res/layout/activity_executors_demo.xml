@@ -22,4 +22,9 @@
         android:id="@+id/btSingleThreadExecutor"
         style="@style/ACLBaseWidget.Button.OpenTopic"
         android:text="@string/single_thread_executor" />
+
+    <Button
+        android:id="@+id/btAllExecutorServiceMethods"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/all_executor_service_methods" />
 </LinearLayout>

@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 
 import com.shevart.androidcorelearn.common.DemoStartable;
 import com.shevart.androidcorelearn.utils.LogUtil;
-import com.shevart.androidcorelearn.utils.ThreadUtil;
+import com.shevart.androidcorelearn.utils.ThreadDemoUtil;
 
 /***
  * <h3>Developer comment</h3>
@@ -25,7 +25,7 @@ class AliveJoinDemo implements DemoStartable {
     private static class ThreadA extends Thread {
         @Override
         public void run() {
-            ThreadUtil.sleep2000ms();
+            ThreadDemoUtil.sleep2000ms();
         }
     }
 
@@ -38,7 +38,7 @@ class AliveJoinDemo implements DemoStartable {
 
         @Override
         public void run() {
-            ThreadUtil.sleep500ms();
+            ThreadDemoUtil.sleep500ms();
             LogUtil.e("ThreadB - check isAlive()");
             if (thread.isAlive()) {
                 LogUtil.e("ThreadB - isAlive() = true");

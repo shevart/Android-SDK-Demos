@@ -5,7 +5,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.NonNull;
 
-import com.shevart.androidcorelearn.utils.ThreadUtil;
+import com.shevart.androidcorelearn.utils.ThreadDemoUtil;
 
 /***
  * <h3>Developer comment</h3>
@@ -54,7 +54,7 @@ class WorkerThread extends Thread {
 
     // fake long-running operation
     private void runJob(int jobId) {
-        ThreadUtil.sleep1000ms();
+        ThreadDemoUtil.sleep1000ms();
         onJobComplete(jobId);
     }
 
