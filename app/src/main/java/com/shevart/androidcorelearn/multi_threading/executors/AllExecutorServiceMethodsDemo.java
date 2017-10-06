@@ -30,7 +30,6 @@ class AllExecutorServiceMethodsDemo implements DemoStartable {
     }
 
     private void executeDemo(@NonNull ExecutorService executorService) {
-        Thread.currentThread().setName("executeDemo");
         executorService.execute(new Runnable() {
             @Override
             public void run() {
@@ -40,7 +39,6 @@ class AllExecutorServiceMethodsDemo implements DemoStartable {
     }
 
     private void submitDemo(@NonNull ExecutorService executorService) {
-        Thread.currentThread().setName("submitDemo");
         Future future = executorService.submit(new Runnable() {
             @Override
             public void run() {
@@ -55,7 +53,6 @@ class AllExecutorServiceMethodsDemo implements DemoStartable {
     }
 
     private void submitWithResultDemo(@NonNull ExecutorService executorService) {
-        Thread.currentThread().setName("submitWithResultDemo");
         Future<String> futureResult = executorService.submit(new Callable<String>() {
             @Override
             public String call() throws Exception {
@@ -71,7 +68,6 @@ class AllExecutorServiceMethodsDemo implements DemoStartable {
     }
 
     private void invokeAnyDemo(@NonNull ExecutorService executorService) {
-        Thread.currentThread().setName("invokeAnyDemo");
         try {
             String result = executorService.invokeAny(ThreadDemoUtil.createTestTasksList(10));
             LogUtil.e("ExecutorService.invokeAny() - result of execution is: " + result);
@@ -81,7 +77,6 @@ class AllExecutorServiceMethodsDemo implements DemoStartable {
     }
 
     private void invokeAllDemo(@NonNull ExecutorService executorService) {
-        Thread.currentThread().setName("invokeAllDemo");
         try {
             final List<Future<String>> futureList = executorService.invokeAll(ThreadDemoUtil.createTestTasksList(10));
             for (Future<String> f : futureList) {
