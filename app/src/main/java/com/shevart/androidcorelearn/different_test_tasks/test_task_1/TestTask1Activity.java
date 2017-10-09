@@ -1,4 +1,4 @@
-package com.shevart.androidcorelearn.multi_threading.test_task_1;
+package com.shevart.androidcorelearn.different_test_tasks.test_task_1;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.shevart.androidcorelearn.R;
+import com.shevart.androidcorelearn.different_test_tasks.test_task_1.util.IntervalsXMLParser;
 import com.shevart.androidcorelearn.utils.AssetsUtil;
 import com.shevart.androidcorelearn.utils.UiNotificationsUtils;
 

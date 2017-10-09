@@ -1,7 +1,8 @@
-package com.shevart.androidcorelearn.multi_threading.test_task_1;
+package com.shevart.androidcorelearn.different_test_tasks.test_task_1.util;
 
 import android.support.annotation.NonNull;
 
+import com.shevart.androidcorelearn.different_test_tasks.test_task_1.model.Interval;
 import com.shevart.androidcorelearn.utils.LogUtil;
 
 import java.util.ArrayList;

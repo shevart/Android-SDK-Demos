@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.shevart.androidcorelearn.multi_threading.test_task_1.TestTask1Activity">
+    tools:context=".different_test_tasks.test_task_1.TestTask1Activity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvResults"
