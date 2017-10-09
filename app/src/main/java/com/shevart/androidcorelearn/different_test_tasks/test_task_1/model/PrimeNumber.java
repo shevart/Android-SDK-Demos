@@ -4,6 +4,15 @@ public class PrimeNumber {
     private int threadId;
     private int primeNumber;
 
+    public PrimeNumber() {
+
+    }
+
+    public PrimeNumber(int threadId, int primeNumber) {
+        this.threadId = threadId;
+        this.primeNumber = primeNumber;
+    }
+
     public int getThreadId() {
         return threadId;
     }
