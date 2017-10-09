@@ -3,20 +3,18 @@ package com.shevart.androidcorelearn.utils;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.compat.BuildConfig;
-import android.util.Log;
 import android.widget.Toast;
 
 @SuppressWarnings("WeakerAccess")
 public class UiNotificationsUtils {
-    // TODO: 09.05.17 use gradle and BuildConfig flag
-    private static boolean isDebug = true;
+    private static boolean debug = BuildConfig.DEBUG;
 
     public static void showEmptyToast(@NonNull Context context, @NonNull String msg) {
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
     }
 
     public static void showDevMessage(@NonNull Context context, @NonNull String msg) {
-        if (isDebug) {
+        if (debug) {
             showEmptyToast(context, msg);
             LogUtil.e(msg);
         }
