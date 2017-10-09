@@ -3,9 +3,11 @@ package com.shevart.androidcorelearn.different_test_tasks.test_task_1;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.shevart.androidcorelearn.R;
@@ -37,6 +39,14 @@ class PrimeNumbersRVAdapter extends RecyclerView.Adapter<PrimeNumbersRVAdapter.V
         final PrimeNumber number = items.get(position);
         holder.tvThreadId.setText(formatThreadID(number.getThreadId()));
         holder.tvThreadPrimeNumber.setText(formatPrimeNumber(number.getPrimeNumber()));
+
+        if (number.getThreadId() % 2 == 0) {
+            holder.llPrimeNumber.setGravity(Gravity.RIGHT);
+            holder.tvThreadId.setBackgroundResource(R.drawable.shape_thread_id_bg_right);
+        } else {
+            holder.llPrimeNumber.setGravity(Gravity.LEFT);
+            holder.tvThreadId.setBackgroundResource(R.drawable.shape_thread_id_bg_left);
+        }
     }
 
     private String formatThreadID(int threadId) {
@@ -66,10 +76,12 @@ class PrimeNumbersRVAdapter extends RecyclerView.Adapter<PrimeNumbersRVAdapter.V
     static final class ViewHolder extends RecyclerView.ViewHolder {
         final TextView tvThreadId;
         final TextView tvThreadPrimeNumber;
+        final LinearLayout llPrimeNumber;
         ViewHolder(View itemView) {
             super(itemView);
             tvThreadId = (TextView) itemView.findViewById(R.id.tvThreadId);
             tvThreadPrimeNumber = (TextView) itemView.findViewById(R.id.tvThreadPrimeNumber);
+            llPrimeNumber = (LinearLayout) itemView.findViewById(R.id.llPrimeNumber);
         }
     }
 }
