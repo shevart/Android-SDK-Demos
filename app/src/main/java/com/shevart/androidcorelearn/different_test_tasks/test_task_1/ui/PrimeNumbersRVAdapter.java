@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -40,13 +39,9 @@ class PrimeNumbersRVAdapter extends RecyclerView.Adapter<PrimeNumbersRVAdapter.V
         holder.tvThreadId.setText(formatThreadID(number.getThreadId()));
         holder.tvThreadPrimeNumber.setText(formatPrimeNumber(number.getPrimeNumber()));
 
-        if (number.getThreadId() % 2 == 0) {
-            holder.llPrimeNumber.setGravity(Gravity.RIGHT);
-            holder.tvThreadId.setBackgroundResource(R.drawable.shape_thread_id_bg_right);
-        } else {
-            holder.llPrimeNumber.setGravity(Gravity.LEFT);
-            holder.tvThreadId.setBackgroundResource(R.drawable.shape_thread_id_bg_left);
-        }
+        boolean isContentAlignToLeft = number.getThreadId() % 2 == 0;
+        holder.llPrimeNumber.setGravity(isContentAlignToLeft ? Gravity.LEFT : Gravity.RIGHT);
+        holder.tvThreadId.setBackgroundResource(isContentAlignToLeft ? R.drawable.shape_thread_id_bg_left : R.drawable.shape_thread_id_bg_right);
     }
 
     private String formatThreadID(int threadId) {
