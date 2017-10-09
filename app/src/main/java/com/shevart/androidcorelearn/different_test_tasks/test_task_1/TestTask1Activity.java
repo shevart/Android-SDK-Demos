@@ -65,7 +65,7 @@ public class TestTask1Activity extends AppCompatActivity {
         @Override
         public void run() {
             if (weakReference.get() == null) {
-                throw new IllegalArgumentException("We need context for read string from assets!");
+                throw new IllegalArgumentException("We need context for read XML-string from assets!");
             }
 
             // avoid memory leak - use only app context

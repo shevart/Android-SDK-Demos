@@ -23,25 +23,27 @@ public class IntervalsXMLParser {
         final List<Interval> intervals = new ArrayList<>();
 
         // no intervals list in XML
-        if (!XMLParserUtil.isContainsElementByTagNameInXML(s, LIST_TAG))
+        if (!XMLParserUtil.isContainsElementByTagName(s, LIST_TAG))
             return intervals;
 
         // retrieve Intervals list XML
-        String intervalsListXMLPart = XMLParserUtil.retrieveFirstElementContentFromXML(s, LIST_TAG);
+        String intervalsListXMLPart = XMLParserUtil.retrieveFirstElementContent(s, LIST_TAG);
         LogUtil.e(intervalsListXMLPart);
 
         // while XML list contains Intervals parse it
         while (intervalsListXMLPart.contains(INTERVAL_TAG)) {
-            intervals.add(parseIntervalFromXML(retrieveFirstIntervalElementFromXML(intervalsListXMLPart)));
+            // parse and add Interval item from xml list
+            intervals.add(parseIntervalFromXML(retrieveFirstIntervalElement(intervalsListXMLPart)));
             // remove parsed Interval from list in XML
-            intervalsListXMLPart = XMLParserUtil.removeFirstIntervalElementFromXML(intervalsListXMLPart, INTERVAL_TAG);
+            intervalsListXMLPart = XMLParserUtil
+                    .removeFirstIntervalElement(intervalsListXMLPart, INTERVAL_TAG);
         }
 
         return intervals;
     }
 
-    private static String retrieveFirstIntervalElementFromXML(@NonNull String s) {
-        return XMLParserUtil.retrieveFirstElementContentFromXML(s, INTERVAL_TAG);
+    private static String retrieveFirstIntervalElement(@NonNull String s) {
+        return XMLParserUtil.retrieveFirstElementContent(s, INTERVAL_TAG);
     }
 
     private static Interval parseIntervalFromXML(@NonNull String xml) {
