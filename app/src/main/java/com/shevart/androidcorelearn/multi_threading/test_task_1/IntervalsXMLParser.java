@@ -17,7 +17,6 @@ public class IntervalsXMLParser {
     private static final String LOW_TAG = "low";
     private static final String HIGH_TAG = "high";
 
-
     public static List<Interval> parseIntervals(@NonNull String s) {
         checkNonNullOrEmpty(s);
         final List<Interval> intervals = new ArrayList<>();

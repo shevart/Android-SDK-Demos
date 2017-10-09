@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.lang.ref.WeakReference;
 
 public class TestTask1Activity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +38,6 @@ public class TestTask1Activity extends AppCompatActivity {
             public void run() {
                 // TODO: 09.10.17 refactor it - use handler!
                 UiNotificationsUtils.showDevMessage(TestTask1Activity.this, result);
-
                 IntervalsXMLParser.parseIntervals(result);
             }
         });
