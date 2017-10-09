@@ -18,7 +18,17 @@
         android:background="@drawable/shape_thread_id_bg_left"
         android:textSize="21sp"
         tools:ignore="RtlSymmetry"
-        tools:text="Thread number: %d" />
+        tools:text="@string/thread_number_pattern" />
+
+    <TextView
+        android:id="@+id/tvThreadPrimeNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:paddingStart="16dp"
+        android:textColor="@android:color/white"
+        tools:ignore="RtlSymmetry"
+        tools:text="@string/prime_number_generated_pattern" />
 
     <View
         android:layout_width="match_parent"

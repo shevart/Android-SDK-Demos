@@ -4,6 +4,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.shevart.androidcorelearn.R;
@@ -15,10 +17,16 @@ import java.io.IOException;
 import java.lang.ref.WeakReference;
 
 public class TestTask1Activity extends AppCompatActivity {
+    private PrimeNumbersRVAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_task1);
+
+        RecyclerView rvPrimeNumbers = (RecyclerView) findViewById(R.id.rvPrimeNumbers);
+        rvPrimeNumbers.setLayoutManager(new LinearLayoutManager(this));
+        rvPrimeNumbers.setAdapter(adapter);
 
         findViewById(R.id.btStart).setOnClickListener(new View.OnClickListener() {
             @Override
