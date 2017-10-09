@@ -39,6 +39,8 @@ public class TestTask1Activity extends AppCompatActivity {
             public void run() {
                 // TODO: 09.10.17 refactor it - use handler!
                 UiNotificationsUtils.showDevMessage(TestTask1Activity.this, result);
+
+                IntervalsXMLParser.parseIntervals(result);
             }
         });
 
