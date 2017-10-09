@@ -27,7 +27,7 @@ public class XMLParserUtil {
     }
 
     public static int parseInt(@NonNull String xml, @NonNull String elementName) {
-        String elementContent = retrieveFirstElementContent(xml, elementName);
+        String elementContent = retrieveFirstElementContent(xml, elementName).trim();
         return Integer.valueOf(elementContent);
     }
 
