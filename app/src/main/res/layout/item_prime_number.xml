@@ -4,7 +4,7 @@
     android:id="@+id/llPrimeNumber"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/grey_dark"
+    android:background="@color/greyPrimary"
     android:orientation="vertical">
 
     <TextView
@@ -15,6 +15,7 @@
         android:padding="8dp"
         android:paddingStart="16dp"
         android:textColor="@android:color/white"
+        android:background="@drawable/shape_thread_id_bg_left"
         android:textSize="21sp"
         tools:ignore="RtlSymmetry"
         tools:text="Thread number: %d" />
