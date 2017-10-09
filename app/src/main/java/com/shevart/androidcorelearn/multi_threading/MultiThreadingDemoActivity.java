@@ -9,7 +9,6 @@ import com.shevart.androidcorelearn.common.AbsActivity;
 import com.shevart.androidcorelearn.multi_threading.executors.ExecutorsDemoActivity;
 import com.shevart.androidcorelearn.multi_threading.handler_looper.HandlerLooperSampleActivity;
 import com.shevart.androidcorelearn.multi_threading.simple_threads.SimpleThreadsSampleActivity;
-import com.shevart.androidcorelearn.different_test_tasks.test_task_1.TestTask1Activity;
 
 public class MultiThreadingDemoActivity extends AbsActivity {
     private View.OnClickListener buttonsClickListener = new View.OnClickListener() {

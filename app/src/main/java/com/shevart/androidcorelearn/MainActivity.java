@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.shevart.androidcorelearn.fragments.FragmentsDemoActivity;
 import com.shevart.androidcorelearn.multi_threading.MultiThreadingDemoActivity;
-import com.shevart.androidcorelearn.different_test_tasks.test_task_1.TestTask1Activity;
+import com.shevart.androidcorelearn.different_test_tasks.test_task_1.ui.TestTask1Activity;
 import com.shevart.androidcorelearn.service.ServiceLearnActivity;
 
 public class MainActivity extends AppCompatActivity {

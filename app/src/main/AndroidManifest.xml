@@ -54,7 +54,7 @@
             android:name=".multi_threading.executors.ExecutorsDemoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".different_test_tasks.test_task_1.TestTask1Activity"
+            android:name=".different_test_tasks.test_task_1.ui.TestTask1Activity"
             android:screenOrientation="portrait" />
 
         <service android:name=".service.service_not_sticky.NotStickyService" />

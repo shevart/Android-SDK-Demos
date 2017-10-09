@@ -1,4 +1,4 @@
-package com.shevart.androidcorelearn.different_test_tasks.test_task_1;
+package com.shevart.androidcorelearn.different_test_tasks.test_task_1.ui;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -50,35 +50,4 @@ public class TestTask1Activity extends AbsActivity implements XMLFileReader.XMLS
         // TODO: 09.10.17 handle error
         UiNotificationsUtils.showEmptyToast(this, e.getMessage());
     }
-
-//    private static class XMLFileReader extends Thread {
-//        private WeakReference<TestTask1Activity> weakReference;
-//        private String fileName;
-//
-//        XMLFileReader(@NonNull TestTask1Activity activity, @NonNull String fileName) {
-//            weakReference = new WeakReference<>(activity);
-//            this.fileName = fileName;
-//        }
-//
-//        @Override
-//        public void run() {
-//            if (weakReference.get() == null) {
-//                throw new IllegalArgumentException("We need context for read XML-string from assets!");
-//            }
-//
-//            // avoid memory leak - use only app context
-//            Context appContext = weakReference.get().getApplicationContext();
-//            try {
-//                onResult(AssetsUtil.stringFromAssetsFile(appContext, fileName));
-//            } catch (IOException e) {
-//                throw new RuntimeException(e); // todo check it
-//            }
-//        }
-//
-//        private void onResult(@NonNull String s) {
-//            if (weakReference.get() != null) {
-//                weakReference.get().onXMLStringRead(s);
-//            }
-//        }
-//    }
 }
