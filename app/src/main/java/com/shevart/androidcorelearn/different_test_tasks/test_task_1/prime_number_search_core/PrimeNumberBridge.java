@@ -21,7 +21,7 @@ class PrimeNumberBridge {
         notify();
     }
 
-    void onWorkerFinish() {
+    synchronized void onWorkerFinish() {
         workersCount--;
         notify();
     }
