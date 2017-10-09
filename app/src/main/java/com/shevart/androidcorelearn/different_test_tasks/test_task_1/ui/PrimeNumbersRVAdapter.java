@@ -12,12 +12,13 @@ import android.widget.TextView;
 
 import com.shevart.androidcorelearn.R;
 import com.shevart.androidcorelearn.different_test_tasks.test_task_1.model.PrimeNumber;
+import com.shevart.androidcorelearn.utils.UiUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "WeakerAccess"})
 class PrimeNumbersRVAdapter extends RecyclerView.Adapter<PrimeNumbersRVAdapter.ViewHolder> {
     private List<PrimeNumber> items = new ArrayList<>();
     private final String THREAD_ID_PATTERN;
@@ -30,8 +31,7 @@ class PrimeNumbersRVAdapter extends RecyclerView.Adapter<PrimeNumbersRVAdapter.V
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_prime_number, parent));
+        return new ViewHolder(UiUtil.inflate(parent, R.layout.item_prime_number));
     }
 
     @Override
@@ -73,7 +73,7 @@ class PrimeNumbersRVAdapter extends RecyclerView.Adapter<PrimeNumbersRVAdapter.V
         return items.size();
     }
 
-    static final class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         final TextView tvThreadId;
         final TextView tvThreadPrimeNumber;
         final LinearLayout llPrimeNumber;

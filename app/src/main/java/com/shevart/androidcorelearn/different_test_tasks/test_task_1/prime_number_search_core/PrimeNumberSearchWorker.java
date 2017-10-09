@@ -23,7 +23,7 @@ class PrimeNumberSearchWorker implements Runnable {
         if (IntervalUtil.isValidInterval(interval)) {
             for (int i = interval.getLow(); i <= interval.getHigh(); i++) {
                 if (PrimeNumberUtil.isPrimeNumber(i)) {
-                    LogUtil.e("The primeNumber found - " + i);
+                    LogUtil.e("The primeNumber is found - " + i);
                     primeNumberBuffer.addNewPrimeNumber(new PrimeNumber(interval.getId(), i));
                 }
             }
