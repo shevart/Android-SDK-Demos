@@ -43,26 +43,21 @@ public class TestTask1Activity extends AbsActivity implements XMLFileReader.XMLS
         reader.start();
     }
 
-    @MainThread
     @Override
     public void onXMLStringResult(@NonNull final String result) {
-        UiNotificationsUtils.showDevMessage(TestTask1Activity.this, result);
         primeNumberSearcher.searchPrimeNumbers(IntervalsXMLParser.parseIntervals(result));
         primeNumberSearcher.setPrimeNumbersCallback(uiHandler);
     }
 
-    @MainThread
     @Override
     public void onXMLStringReadFailure(@NonNull final Exception e) {
         showError(e.getMessage());
     }
 
-    @MainThread
     private void showError(@NonNull String error) {
         UiNotificationsUtils.showEmptyToast(this, error);
     }
 
-    @MainThread
     private void addNewPrimeNumber(@NonNull PrimeNumber primeNumber) {
         adapter.addItem(primeNumber);
     }
@@ -71,8 +66,12 @@ public class TestTask1Activity extends AbsActivity implements XMLFileReader.XMLS
     protected void onDestroy() {
         super.onDestroy();
         uiHandler.removeCallbacksAndMessages(null);
+        primeNumberSearcher.removePrimeNumbersCallback();
     }
 
+    /***
+     * This class receive data from background threads and post it to MainThread.
+     */
     @SuppressWarnings("WeakerAccess")
     static class UiHandler extends Handler implements XMLFileReader.XMLStringCallback, PrimeNumbersCallback {
         private WeakReference<TestTask1Activity> weakReference;

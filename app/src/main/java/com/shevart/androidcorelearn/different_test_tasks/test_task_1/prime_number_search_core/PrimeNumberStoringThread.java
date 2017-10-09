@@ -7,7 +7,7 @@ class PrimeNumberStoringThread extends Thread {
     private PrimeNumbersCallback primeNumbersCallback;
     private boolean finish = false;
 
-    public PrimeNumberStoringThread(@NonNull PrimeNumberBuffer buffer,
+    PrimeNumberStoringThread(@NonNull PrimeNumberBuffer buffer,
                                     @NonNull PrimeNumbersCallback callback) {
         this.buffer = buffer;
         primeNumbersCallback = callback;
