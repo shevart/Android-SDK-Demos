@@ -9,6 +9,7 @@ import com.shevart.androidcorelearn.common.AbsActivity;
 import com.shevart.androidcorelearn.multi_threading.executors.ExecutorsDemoActivity;
 import com.shevart.androidcorelearn.multi_threading.handler_looper.HandlerLooperSampleActivity;
 import com.shevart.androidcorelearn.multi_threading.simple_threads.SimpleThreadsSampleActivity;
+import com.shevart.androidcorelearn.multi_threading.test_task_1.TestTask1Activity;
 
 public class MultiThreadingDemoActivity extends AbsActivity {
     private View.OnClickListener buttonsClickListener = new View.OnClickListener() {
@@ -24,6 +25,9 @@ public class MultiThreadingDemoActivity extends AbsActivity {
                 case R.id.btExecutors:
                     startActivity(new Intent(MultiThreadingDemoActivity.this, ExecutorsDemoActivity.class));
                     break;
+                case R.id.btFirstTestTask:
+                    startActivity(new Intent(MultiThreadingDemoActivity.this, TestTask1Activity.class));
+                    break;
                 default:
                     throw new IllegalArgumentException("Check it!");
             }
@@ -38,5 +42,6 @@ public class MultiThreadingDemoActivity extends AbsActivity {
         findViewById(R.id.btSimpleThreads).setOnClickListener(buttonsClickListener);
         findViewById(R.id.btHandlerLooper).setOnClickListener(buttonsClickListener);
         findViewById(R.id.btExecutors).setOnClickListener(buttonsClickListener);
+        findViewById(R.id.btFirstTestTask).setOnClickListener(buttonsClickListener);
     }
 }

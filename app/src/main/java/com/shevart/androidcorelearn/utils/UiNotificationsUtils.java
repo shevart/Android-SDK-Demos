@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 @SuppressWarnings("WeakerAccess")
 public class UiNotificationsUtils {
-    private static boolean debug = BuildConfig.DEBUG;
+    private static boolean debug = true;
 
     public static void showEmptyToast(@NonNull Context context, @NonNull String msg) {
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
