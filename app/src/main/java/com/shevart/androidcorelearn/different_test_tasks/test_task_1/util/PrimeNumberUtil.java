@@ -1,7 +1,5 @@
 package com.shevart.androidcorelearn.different_test_tasks.test_task_1.util;
 
-import com.shevart.androidcorelearn.different_test_tasks.test_task_1.model.PrimeNumber;
-
 import java.math.BigInteger;
 
 public class PrimeNumberUtil {
