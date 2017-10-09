@@ -2,25 +2,23 @@ package com.shevart.androidcorelearn.different_test_tasks.test_task_1.prime_numb
 
 import android.support.annotation.NonNull;
 
+import com.shevart.androidcorelearn.utils.LogUtil;
+
 class PrimeNumberStoringThread extends Thread {
-    private PrimeNumberBuffer buffer;
+    private PrimeNumberBridge bridge;
     private PrimeNumbersCallback primeNumbersCallback;
-    private boolean finish = false;
 
-    PrimeNumberStoringThread(@NonNull PrimeNumberBuffer buffer,
+    PrimeNumberStoringThread(@NonNull PrimeNumberBridge bridge,
                                     @NonNull PrimeNumbersCallback callback) {
-        this.buffer = buffer;
+        this.bridge = bridge;
         primeNumbersCallback = callback;
-    }
-
-    private void finish() {
-        finish = true;
     }
 
     @Override
     public void run() {
-        while (!finish) {
-            primeNumbersCallback.onNewPrimeNumberFound(buffer.getPrimeNumber());
+        while (!bridge.isFinish()) {
+            primeNumbersCallback.onNewPrimeNumberFound(bridge.getPrimeNumber());
         }
+        LogUtil.e("PrimeNumberStoringThread - finish");
     }
 }

@@ -10,22 +10,21 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class PrimeNumberSearcher implements PrimeNumbersCallback {
-    private ExecutorService executorService;
-    private PrimeNumberBuffer primeNumberBuffer;
-    private PrimeNumberStoringThread primeNumberStoringThread;
     private PrimeNumbersCallback primeNumbersCallback;
 
     public PrimeNumberSearcher() {
-        primeNumberBuffer = new PrimeNumberBuffer();
-        executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
-        primeNumberStoringThread = new PrimeNumberStoringThread(primeNumberBuffer, this);
+
     }
 
     public void searchPrimeNumbers(@NonNull List<Interval> intervals) {
+        ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+        PrimeNumberBridge primeNumberBridge = new PrimeNumberBridge(intervals.size());
+        PrimeNumberStoringThread primeNumberStoringThread = new PrimeNumberStoringThread(primeNumberBridge, this);
         primeNumberStoringThread.start();
         for (Interval interval : intervals) {
-            executorService.execute(new PrimeNumberSearchWorker(primeNumberBuffer, interval));
+            executorService.execute(new PrimeNumberSearchWorker(primeNumberBridge, interval));
         }
+        executorService.shutdown();
     }
 
     public void setPrimeNumbersCallback(@NonNull PrimeNumbersCallback callback) {

@@ -9,11 +9,11 @@ import com.shevart.androidcorelearn.different_test_tasks.test_task_1.util.PrimeN
 import com.shevart.androidcorelearn.utils.LogUtil;
 
 class PrimeNumberSearchWorker implements Runnable {
-    private PrimeNumberBuffer primeNumberBuffer;
+    private PrimeNumberBridge primeNumberBridge;
     private Interval interval;
 
-    PrimeNumberSearchWorker(@NonNull PrimeNumberBuffer buffer, @NonNull Interval interval) {
-        primeNumberBuffer = buffer;
+    PrimeNumberSearchWorker(@NonNull PrimeNumberBridge buffer, @NonNull Interval interval) {
+        primeNumberBridge = buffer;
         this.interval = interval;
     }
 
@@ -24,7 +24,7 @@ class PrimeNumberSearchWorker implements Runnable {
             for (int i = interval.getLow(); i <= interval.getHigh(); i++) {
                 if (PrimeNumberUtil.isPrimeNumber(i)) {
                     LogUtil.e("The primeNumber is found - " + i);
-                    primeNumberBuffer.addNewPrimeNumber(new PrimeNumber(interval.getId(), i));
+                    primeNumberBridge.addNewPrimeNumber(new PrimeNumber(interval.getId(), i));
                 }
             }
         }
@@ -32,7 +32,7 @@ class PrimeNumberSearchWorker implements Runnable {
     }
 
     private void finish() {
-        // TODO: 09.10.17 add logic here
         LogUtil.e("finish() " + Thread.currentThread().getName());
+        primeNumberBridge.onWorkerFinish();
     }
 }

@@ -33,6 +33,7 @@ public class TestTask1Activity extends AbsActivity implements XMLFileReader.XMLS
         RecyclerView rvPrimeNumbers = (RecyclerView) findViewById(R.id.rvPrimeNumbers);
         rvPrimeNumbers.setLayoutManager(new LinearLayoutManager(this));
         rvPrimeNumbers.setAdapter(adapter);
+        rvPrimeNumbers.setHasFixedSize(true);
 
         uiHandler = new UiHandler(this);
         startLoad();
