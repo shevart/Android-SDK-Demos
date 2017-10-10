@@ -4,6 +4,8 @@ import android.support.annotation.NonNull;
 
 import java.util.Locale;
 
+import static com.shevart.androidcorelearn.utils.Util.isNullOrEmpty;
+
 @SuppressWarnings("WeakerAccess")
 public class XMLParserUtil {
     private static final String START_TAG_PATTERN = "<%s>";
@@ -15,12 +17,18 @@ public class XMLParserUtil {
     }
 
     public static String removeFirstIntervalElement(@NonNull String s, @NonNull String element) {
+        if (!isContainsElementByTagName(s, element))
+            throw new IllegalArgumentException();
+
         String endTag = prepareEndTag(element);
-        return s.substring(s.indexOf(endTag) + element.length());
+        return s.substring(s.indexOf(endTag) + endTag.length());
     }
 
     public static String retrieveFirstElementContent(@NonNull String xml,
                                                      @NonNull String elementName) {
+        if (isNullOrEmpty(xml) || isNullOrEmpty(elementName))
+            throw new IllegalArgumentException();
+
         String startTag = prepareStartTag(elementName);
         return xml.substring(xml.indexOf(startTag) + startTag.length(),
                 xml.indexOf(prepareEndTag(elementName)));
