@@ -39,7 +39,7 @@ class PrimeNumbersRVAdapter extends RecyclerView.Adapter<PrimeNumbersRVAdapter.V
         holder.tvThreadId.setText(formatThreadID(number.getThreadId()));
         holder.tvThreadPrimeNumber.setText(formatPrimeNumber(number.getPrimeNumber()));
 
-        boolean isContentAlignToLeft = number.getThreadId() % 2 == 0;
+        boolean isContentAlignToLeft = number.getThreadId() % 2 != 0;
         holder.llPrimeNumber.setGravity(isContentAlignToLeft ? Gravity.LEFT : Gravity.RIGHT);
         holder.tvThreadId.setBackgroundResource(isContentAlignToLeft ? R.drawable.shape_thread_id_bg_left
                 : R.drawable.shape_thread_id_bg_right);

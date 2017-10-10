@@ -30,15 +30,9 @@ class PrimeNumberStoringThread extends Thread {
     @StoringThreadState
     private int state = NEW;
 
-    PrimeNumberStoringThread(@NonNull PrimeNumberBridge bridge,
-                                    @NonNull PrimeNumbersCallback callback) {
+    PrimeNumberStoringThread(@NonNull PrimeNumberBridge bridge, @NonNull PrimeNumbersCallback callback) {
         this.bridge = bridge;
         primeNumbersCallback = callback;
-    }
-
-    @StoringThreadState
-    public int getStoringThreadState() {
-        return state;
     }
 
     public void finish() {
@@ -51,6 +45,7 @@ class PrimeNumberStoringThread extends Thread {
         while (state != FINISHED) {
             runByState();
         }
+        LogUtil.e("PrimeNumberStoringThread - finish");
     }
 
     private void runByState() {
@@ -76,7 +71,8 @@ class PrimeNumberStoringThread extends Thread {
     private void fetchPrimeNumber() {
         PrimeNumber primeNumber = bridge.getPrimeNumber();
         if (primeNumber != null) {
-            ThreadDemoUtil.sleep500ms(); // fake delay
+            // fake delay - todo add interrupt handling in the future
+            ThreadDemoUtil.sleep500ms();
             primeNumbersCallback.onNewPrimeNumberFound(primeNumber);
         } else {
             handleError();
@@ -94,6 +90,7 @@ class PrimeNumberStoringThread extends Thread {
     }
 
     private void handleDisconnect() {
-        state = FINISHED; // add your logic for handling disconnect
+        // todo add your logic for handling disconnect
+        state = FINISHED;
     }
 }
