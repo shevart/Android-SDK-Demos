@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 
 import java.util.Locale;
 
+import static com.shevart.androidcorelearn.utils.Util.checkNonNullOrEmpty;
 import static com.shevart.androidcorelearn.utils.Util.isNullOrEmpty;
 
 @SuppressWarnings("WeakerAccess")
@@ -12,11 +13,15 @@ public class XMLParserUtil {
     private static final String END_TAG_PATTERN = "</%s>";
 
     public static boolean isContainsElementByTagName(@NonNull String xml, @NonNull String elementName) {
+        checkNonNullOrEmpty(xml);
+        checkNonNullOrEmpty(elementName);
         return xml.contains(prepareStartTag(elementName))
                 && xml.contains(prepareEndTag(elementName));
     }
 
     public static String removeFirstIntervalElement(@NonNull String s, @NonNull String element) {
+        checkNonNullOrEmpty(s);
+        checkNonNullOrEmpty(element);
         if (!isContainsElementByTagName(s, element))
             throw new IllegalArgumentException();
 
@@ -26,9 +31,8 @@ public class XMLParserUtil {
 
     public static String retrieveFirstElementContent(@NonNull String xml,
                                                      @NonNull String elementName) {
-        if (isNullOrEmpty(xml) || isNullOrEmpty(elementName))
-            throw new IllegalArgumentException();
-
+        checkNonNullOrEmpty(xml);
+        checkNonNullOrEmpty(elementName);
         String startTag = prepareStartTag(elementName);
         return xml.substring(xml.indexOf(startTag) + startTag.length(),
                 xml.indexOf(prepareEndTag(elementName)));
