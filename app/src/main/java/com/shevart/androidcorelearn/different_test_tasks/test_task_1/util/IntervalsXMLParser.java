@@ -31,7 +31,7 @@ public class IntervalsXMLParser {
         LogUtil.e(intervalsListXMLPart);
 
         // while XML list contains Intervals parse it
-        while (intervalsListXMLPart.contains(INTERVAL_TAG)) {
+        while (XMLParserUtil.isContainsElementByTagName(intervalsListXMLPart, INTERVAL_TAG)) {
             // parse and add Interval item from xml list
             intervals.add(parseIntervalFromXML(retrieveFirstIntervalElement(intervalsListXMLPart)));
             // remove parsed Interval from list in XML
