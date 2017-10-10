@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/black"
+    tools:context=".different_test_tasks.test_task_1.ui.TestTask1Activity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvPrimeNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llPrimeNumber"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/greyPrimary"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvThreadId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:padding="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/shape_thread_id_bg_left"
+        android:textSize="21sp"
+        tools:ignore="RtlSymmetry"
+        tools:text="@string/thread_number_pattern" />
+
+    <TextView
+        android:id="@+id/tvThreadPrimeNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="24dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@android:color/white"
+        tools:ignore="RtlSymmetry"
+        tools:text="@string/prime_number_generated_pattern" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@android:color/black" />
+
+</LinearLayout>

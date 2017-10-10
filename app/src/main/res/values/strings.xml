@@ -59,4 +59,8 @@
     <string name="single_thread_executor">Single thread executor</string>
     <string name="all_executor_service_methods">All ExecutorService methods</string>
     <string name="future_task_demo">FutureTask demo</string>
+    <string name="start">Start</string>
+    <string name="first_test_task">First test task</string>
+    <string name="thread_number_pattern">Thread number: %d</string>
+    <string name="prime_number_generated_pattern">prime number generated: %d</string>
 </resources>

@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.shevart.androidcorelearn.fragments.FragmentsDemoActivity;
 import com.shevart.androidcorelearn.multi_threading.MultiThreadingDemoActivity;
+import com.shevart.androidcorelearn.different_test_tasks.test_task_1.ui.TestTask1Activity;
 import com.shevart.androidcorelearn.service.ServiceLearnActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,5 +37,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btServiceTopic).setOnClickListener(launcherClickListener);
         findViewById(R.id.btFragmentsTopic).setOnClickListener(launcherClickListener);
         findViewById(R.id.btMultiThreads).setOnClickListener(launcherClickListener);
+
+        // TODO: 09.10.17 remove after test
+        startActivity(new Intent(this, TestTask1Activity.class));
     }
 }
