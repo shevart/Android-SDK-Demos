@@ -18,7 +18,7 @@ import com.shevart.androidcorelearn.utils.UiNotificationsUtils;
 
 import java.lang.ref.WeakReference;
 
-public class TestTask1Activity extends AbsActivity implements XMLFileReader.XMLStringCallback {
+public class TestTask1Activity extends AbsActivity {
     private PrimeNumbersRVAdapter adapter;
     private PrimeNumberSearcher primeNumberSearcher = new PrimeNumberSearcher();
     private UiHandler uiHandler;
@@ -44,13 +44,11 @@ public class TestTask1Activity extends AbsActivity implements XMLFileReader.XMLS
         reader.start();
     }
 
-    @Override
     public void onXMLStringResult(@NonNull final String result) {
-        primeNumberSearcher.searchPrimeNumbers(IntervalsXMLParser.parseIntervals(result));
         primeNumberSearcher.setPrimeNumbersCallback(uiHandler);
+        primeNumberSearcher.searchPrimeNumbers(IntervalsXMLParser.parseIntervals(result));
     }
 
-    @Override
     public void onXMLStringReadFailure(@NonNull final Exception e) {
         showError(e.getMessage());
     }
@@ -68,6 +66,7 @@ public class TestTask1Activity extends AbsActivity implements XMLFileReader.XMLS
         super.onDestroy();
         uiHandler.removeCallbacksAndMessages(null);
         primeNumberSearcher.removePrimeNumbersCallback();
+        primeNumberSearcher.stopSearch();
     }
 
     /***

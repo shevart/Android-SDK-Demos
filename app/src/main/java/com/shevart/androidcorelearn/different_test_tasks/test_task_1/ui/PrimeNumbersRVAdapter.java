@@ -41,7 +41,8 @@ class PrimeNumbersRVAdapter extends RecyclerView.Adapter<PrimeNumbersRVAdapter.V
 
         boolean isContentAlignToLeft = number.getThreadId() % 2 == 0;
         holder.llPrimeNumber.setGravity(isContentAlignToLeft ? Gravity.LEFT : Gravity.RIGHT);
-        holder.tvThreadId.setBackgroundResource(isContentAlignToLeft ? R.drawable.shape_thread_id_bg_left : R.drawable.shape_thread_id_bg_right);
+        holder.tvThreadId.setBackgroundResource(isContentAlignToLeft ? R.drawable.shape_thread_id_bg_left
+                : R.drawable.shape_thread_id_bg_right);
     }
 
     private String formatThreadID(int threadId) {
