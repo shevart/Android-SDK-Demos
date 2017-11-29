@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.shevart.androidcorelearn.arch_components.ArchComponentsActivity;
 import com.shevart.androidcorelearn.fragments.FragmentsDemoActivity;
 import com.shevart.androidcorelearn.multi_threading.MultiThreadingDemoActivity;
 import com.shevart.androidcorelearn.different_test_tasks.test_task_1.ui.TestTask1Activity;
@@ -24,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btMultiThreads:
                     startActivity(new Intent(MainActivity.this, MultiThreadingDemoActivity.class));
                     break;
+                case R.id.btArchComponents:
+                    startActivity(new Intent(MainActivity.this, ArchComponentsActivity.class));
+                    break;
                 default:
                     throw new IllegalArgumentException("Handle it!");
             }
@@ -37,8 +41,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btServiceTopic).setOnClickListener(launcherClickListener);
         findViewById(R.id.btFragmentsTopic).setOnClickListener(launcherClickListener);
         findViewById(R.id.btMultiThreads).setOnClickListener(launcherClickListener);
+        findViewById(R.id.btArchComponents).setOnClickListener(launcherClickListener);
 
         // TODO: 09.10.17 remove after test
-        startActivity(new Intent(this, TestTask1Activity.class));
+//        startActivity(new Intent(this, TestTask1Activity.class));
     }
 }

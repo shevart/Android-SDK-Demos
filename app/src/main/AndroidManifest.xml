@@ -60,5 +60,8 @@
         <service android:name=".service.service_not_sticky.NotStickyService" />
         <service android:name=".service.BinderService" />
 
+        <activity android:name=".arch_components.ArchComponentsActivity" />
+        <activity android:name=".arch_components.viewmodel.SimpleViewModelSampleActivity"></activity>
     </application>
+
 </manifest>

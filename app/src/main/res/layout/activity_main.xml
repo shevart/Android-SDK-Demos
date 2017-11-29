@@ -22,4 +22,9 @@
         android:id="@+id/btMultiThreads"
         style="@style/ACLBaseWidget.Button.OpenTopic"
         android:text="@string/multi_threads" />
+
+    <Button
+        android:id="@+id/btArchComponents"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/arch_components" />
 </LinearLayout>

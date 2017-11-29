@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 26
     buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.shevart.androidcorelearn"
@@ -20,9 +20,9 @@ android {
 }
 
 ext {
-    google_api_vers = '25.3.1'
+    google_api_vers = '26.1.0'
+    arch_components_vers = '1.0.0'
 }
-
 
 
 dependencies {
@@ -30,6 +30,7 @@ dependencies {
     compile "com.android.support:appcompat-v7:$google_api_vers"
     compile "com.android.support:recyclerview-v7:$google_api_vers"
     compile "com.android.support:support-v4:$google_api_vers"
+    implementation "android.arch.lifecycle:extensions:$arch_components_vers"
     // test dependencies
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
