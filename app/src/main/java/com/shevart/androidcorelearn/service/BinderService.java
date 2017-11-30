@@ -16,24 +16,24 @@ public class BinderService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        LogUtil.e("BinderService: onBind()");
+        LogUtil.INSTANCE.e("BinderService: onBind()");
         return myBinder;
     }
 
     @Override
     public boolean onUnbind(Intent intent) {
-        LogUtil.e("BinderService: onUnbind()");
+        LogUtil.INSTANCE.e("BinderService: onUnbind()");
         return super.onUnbind(intent);
     }
 
     @Override
     public void onDestroy() {
-        LogUtil.e("BinderService: onDestroy()");
+        LogUtil.INSTANCE.e("BinderService: onDestroy()");
         super.onDestroy();
     }
 
     public void forceManualStopService() {
-        LogUtil.e("forceManualStopService()");
+        LogUtil.INSTANCE.e("forceManualStopService()");
         stopSelf();
     }
 

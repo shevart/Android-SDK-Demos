@@ -176,7 +176,7 @@ public class CommitsSampleHostActivity extends AbsActivity {
     }
 
     private void displayCurrentLifecycleState(@NonNull String currLifecycle) {
-        LogUtil.e("displayCurrentLifecycleState() - " + currLifecycle);
+        LogUtil.INSTANCE.e("displayCurrentLifecycleState() - " + currLifecycle);
         tvLifecycleState.setText(String.format(Locale.ENGLISH, LIFECYCLE_PATTERN, currLifecycle));
     }
 

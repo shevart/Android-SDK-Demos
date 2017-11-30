@@ -37,7 +37,7 @@ public class XMLFileReader extends Thread {
     }
 
     private void onFailure(@NonNull Exception e) {
-        LogUtil.e(e);
+        LogUtil.INSTANCE.e(e);
         if (weakReference.get() != null) {
             weakReference.get().onXMLStringReadFailure(e);
         }

@@ -45,7 +45,7 @@ class PrimeNumberStoringThread extends Thread {
         while (state != FINISHED) {
             runByState();
         }
-        LogUtil.e("PrimeNumberStoringThread - finish");
+        LogUtil.INSTANCE.e("PrimeNumberStoringThread - finish");
     }
 
     private void runByState() {
@@ -63,7 +63,7 @@ class PrimeNumberStoringThread extends Thread {
                 handleDisconnect();
                 break;
             case FINISHED:
-                LogUtil.e("PrimeNumberStoringThread - finish");
+                LogUtil.INSTANCE.e("PrimeNumberStoringThread - finish");
                 break;
         }
     }

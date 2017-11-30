@@ -25,7 +25,7 @@ class SimpleViewModelSampleActivity : AbsActivity(), SimpleItemsRVAdapter.OnSimp
         showLoading()
 
         val viewModel = ViewModelProviders.of(this).get(MyViewModel::class.java)
-        viewModel.listLiveData.observe(this, Observer { simpleItems -> onSimpleItemsLoaded(simpleItems, adapter) })
+        viewModel.getListLiveData().observe(this, Observer { simpleItems -> onSimpleItemsLoaded(simpleItems, adapter) })
     }
 
     private fun initViews() {
@@ -36,7 +36,7 @@ class SimpleViewModelSampleActivity : AbsActivity(), SimpleItemsRVAdapter.OnSimp
 
     private fun onSimpleItemsLoaded(simpleItems: List<SimpleItem>?, adapter: SimpleItemsRVAdapter?) {
         if (simpleItems != null) {
-            adapter!!.update(simpleItems)
+            adapter?.update(simpleItems)
             showContent()
         }
     }

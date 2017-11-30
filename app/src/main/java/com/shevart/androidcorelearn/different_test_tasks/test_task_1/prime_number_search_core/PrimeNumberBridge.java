@@ -37,7 +37,7 @@ class PrimeNumberBridge {
             try {
                 wait();
             } catch (InterruptedException e) {
-                LogUtil.e(e);
+                LogUtil.INSTANCE.e(e);
                 break;
             }
         }

@@ -11,6 +11,7 @@ class ArchComponentsActivity : AbsActivity() {
     private val clickListener = View.OnClickListener {
         when (it.id) {
             R.id.btViewModelTopic -> Launcher.viewModelSimpleDemo(this)
+            R.id.btLiveDataTopic -> Launcher.liveDataDemo(this)
             else -> throw IllegalArgumentException("Check it!")
         }
     }
@@ -21,5 +22,6 @@ class ArchComponentsActivity : AbsActivity() {
         enableToolbarBackButton()
 
         btViewModelTopic.setOnClickListener(clickListener)
+        btLiveDataTopic.setOnClickListener(clickListener)
     }
 }

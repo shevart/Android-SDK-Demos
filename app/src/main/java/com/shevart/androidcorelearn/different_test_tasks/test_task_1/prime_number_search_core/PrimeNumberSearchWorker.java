@@ -31,7 +31,7 @@ class PrimeNumberSearchWorker implements Runnable {
     }
 
     private void finish() {
-        LogUtil.e("finish() " + Thread.currentThread().getName());
+        LogUtil.INSTANCE.e("finish() " + Thread.currentThread().getName());
         primeNumberBridge.onWorkerFinish();
     }
 }

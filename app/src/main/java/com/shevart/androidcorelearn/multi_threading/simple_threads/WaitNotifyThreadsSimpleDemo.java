@@ -27,7 +27,7 @@ class WaitNotifyThreadsSimpleDemo implements DemoStartable {
         secondThread = new SecondThread(this);
 
         // print threads state
-        LogUtil.e("-- before threads start()");
+        LogUtil.INSTANCE.e("-- before threads start()");
         printThreadsStates();
 
         // start threads
@@ -35,31 +35,31 @@ class WaitNotifyThreadsSimpleDemo implements DemoStartable {
         secondThread.start();
 
         // print threads state
-        LogUtil.e("-- after threads start()");
+        LogUtil.INSTANCE.e("-- after threads start()");
         printThreadsStates();
-        LogUtil.empty();
+        LogUtil.INSTANCE.empty();
     }
 
     private void printThreadsStates() {
-        LogUtil.e("-- THREAD STATUS -- firstThread.status() - " + firstThread.getState().toString());
-        LogUtil.e("-- THREAD STATUS -- secondThread.status() - " + secondThread.getState().toString());
+        LogUtil.INSTANCE.e("-- THREAD STATUS -- firstThread.status() - " + firstThread.getState().toString());
+        LogUtil.INSTANCE.e("-- THREAD STATUS -- secondThread.status() - " + secondThread.getState().toString());
     }
 
     private synchronized void demoSyncMethod() throws InterruptedException {
         if (isFirstThread()) {
-            LogUtil.e("First thread - before wait()");
+            LogUtil.INSTANCE.e("First thread - before wait()");
             printThreadsStates();
             wait();
-            LogUtil.e("First thread - after wait()");
+            LogUtil.INSTANCE.e("First thread - after wait()");
             Thread.sleep(500);
             printThreadsStates();
         } else {
-            LogUtil.e("Second thread - before notify()");
+            LogUtil.INSTANCE.e("Second thread - before notify()");
             printThreadsStates();
             notify();
-            LogUtil.e("Second thread - after notify()");
+            LogUtil.INSTANCE.e("Second thread - after notify()");
             Thread.sleep(500);
-            LogUtil.e("Second thread - after sleep()");
+            LogUtil.INSTANCE.e("Second thread - after sleep()");
         }
     }
 

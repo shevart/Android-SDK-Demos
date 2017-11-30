@@ -3,6 +3,7 @@ package com.shevart.androidcorelearn
 import android.app.Activity
 import android.content.Intent
 import com.shevart.androidcorelearn.arch_components.ArchComponentsActivity
+import com.shevart.androidcorelearn.arch_components.livedata.LiveDataDemoActivity
 import com.shevart.androidcorelearn.arch_components.viewmodel.SimpleViewModelSampleActivity
 import com.shevart.androidcorelearn.fragments.FragmentsDemoActivity
 import com.shevart.androidcorelearn.multi_threading.MultiThreadingDemoActivity
@@ -28,6 +29,10 @@ object Launcher {
 
     fun viewModelSimpleDemo(activity: Activity) {
         startActivity(activity, SimpleViewModelSampleActivity::class.java)
+    }
+
+    fun liveDataDemo(activity: Activity) {
+        startActivity(activity, LiveDataDemoActivity::class.java)
     }
 
     private fun startActivity(activity: Activity, clazz: Class<out Activity>) {

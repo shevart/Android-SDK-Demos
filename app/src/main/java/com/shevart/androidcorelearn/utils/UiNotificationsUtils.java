@@ -15,7 +15,7 @@ public class UiNotificationsUtils {
     public static void showDevMessage(@NonNull Context context, @NonNull String msg) {
         if (debug) {
             showToast(context, msg);
-            LogUtil.e(msg);
+            LogUtil.INSTANCE.e(msg);
         }
     }
 

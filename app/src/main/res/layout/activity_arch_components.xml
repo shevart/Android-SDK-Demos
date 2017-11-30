@@ -13,4 +13,9 @@
         style="@style/ACLBaseWidget.Button.OpenTopic"
         android:text="@string/viewmodel" />
 
+    <Button
+        android:id="@+id/btLiveDataTopic"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/livedata" />
+
 </LinearLayout>

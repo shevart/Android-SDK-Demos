@@ -56,7 +56,7 @@ public class ThreadDemoUtil {
             @Override
             public void run() {
                 sleep50ms();
-                LogUtil.e("TaskId: " + taskId + ", thread name is: " + Thread.currentThread().getName());
+                LogUtil.INSTANCE.e("TaskId: " + taskId + ", thread name is: " + Thread.currentThread().getName());
             }
         };
     }
