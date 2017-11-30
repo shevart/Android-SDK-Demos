@@ -39,14 +39,14 @@ class AliveJoinDemo implements DemoStartable {
         @Override
         public void run() {
             ThreadDemoUtil.sleep500ms();
-            LogUtil.e("ThreadB - check isAlive()");
+            LogUtil.INSTANCE.e("ThreadB - check isAlive()");
             if (thread.isAlive()) {
-                LogUtil.e("ThreadB - isAlive() = true");
+                LogUtil.INSTANCE.e("ThreadB - isAlive() = true");
                 try {
-                    LogUtil.e("ThreadB - waiting for another Thread finish work");
+                    LogUtil.INSTANCE.e("ThreadB - waiting for another Thread finish work");
                     thread.join();
-                    LogUtil.e("ThreadB - another thread is finished");
-                    LogUtil.e("ThreadB - another thread.state() - " + thread.getState().toString());
+                    LogUtil.INSTANCE.e("ThreadB - another thread is finished");
+                    LogUtil.INSTANCE.e("ThreadB - another thread.state() - " + thread.getState().toString());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

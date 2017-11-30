@@ -18,7 +18,7 @@ public class FragmentLifecycleDemoActivity extends AbsActivity {
         setContentView(R.layout.activity_fragment_lifecycle_demo);
         enableToolbarBackButton();
 
-        UiNotificationsUtils.showEmptyToast(this, "See logs!");
+        UiNotificationsUtils.showToast(this, "See logs!");
         LifecycleLogUtil.logMessage(TAG, "onCreate()");
         FragmentUtil.addFragment(getSupportFragmentManager(),
                 new LifecycleAddedDemoFragmentFragment(),

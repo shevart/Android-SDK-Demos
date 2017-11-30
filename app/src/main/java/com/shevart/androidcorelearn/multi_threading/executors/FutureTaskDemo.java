@@ -27,10 +27,10 @@ class FutureTaskDemo implements DemoStartable {
             e.printStackTrace();
         } catch (TimeoutException e) {
             e.printStackTrace();
-            LogUtil.e("Computation still in progress...");
+            LogUtil.INSTANCE.e("Computation still in progress...");
         }
 
-        LogUtil.e("firstAttemptGetResult: " + firstAttemptGetResult);
+        LogUtil.INSTANCE.e("firstAttemptGetResult: " + firstAttemptGetResult);
 
         try {
             secondAttempGetResult = futureTask.get();
@@ -38,7 +38,7 @@ class FutureTaskDemo implements DemoStartable {
             e.printStackTrace();
         }
 
-        LogUtil.e("secondAttempGetResult: " + secondAttempGetResult);
+        LogUtil.INSTANCE.e("secondAttempGetResult: " + secondAttempGetResult);
         executorService.shutdown();
     }
 

@@ -63,7 +63,7 @@ public class BinderServiceActivity extends AbsActivity {
             @Override
             public void onServiceDisconnected(ComponentName name) {
                 UiNotificationsUtils.showDevMessage(BinderServiceActivity.this, "onServiceDisconnected() ");
-                LogUtil.e(name.getClassName());
+                LogUtil.INSTANCE.e(name.getClassName());
                 myBinder = null;
                 onDisconnected();
             }

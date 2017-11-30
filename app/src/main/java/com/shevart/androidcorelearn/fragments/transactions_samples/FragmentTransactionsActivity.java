@@ -67,7 +67,7 @@ public class FragmentTransactionsActivity extends AbsActivity {
         getSupportFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
             @Override
             public void onBackStackChanged() {
-                LogUtil.e("onBackStackChanged()");
+                LogUtil.INSTANCE.e("onBackStackChanged()");
                 updateBackStackDisplay();
             }
         });

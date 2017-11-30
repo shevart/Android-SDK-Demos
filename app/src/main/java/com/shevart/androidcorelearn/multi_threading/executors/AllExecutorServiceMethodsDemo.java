@@ -33,7 +33,7 @@ class AllExecutorServiceMethodsDemo implements DemoStartable {
         executorService.execute(new Runnable() {
             @Override
             public void run() {
-                LogUtil.e("ExecutorService.execute()");
+                LogUtil.INSTANCE.e("ExecutorService.execute()");
             }
         });
     }
@@ -42,7 +42,7 @@ class AllExecutorServiceMethodsDemo implements DemoStartable {
         Future future = executorService.submit(new Runnable() {
             @Override
             public void run() {
-                LogUtil.e("ExecutorService.submit(Runnable)");
+                LogUtil.INSTANCE.e("ExecutorService.submit(Runnable)");
             }
         });
         try {
@@ -56,12 +56,12 @@ class AllExecutorServiceMethodsDemo implements DemoStartable {
         Future<String> futureResult = executorService.submit(new Callable<String>() {
             @Override
             public String call() throws Exception {
-                LogUtil.e("ExecutorService.submit(Callable)");
+                LogUtil.INSTANCE.e("ExecutorService.submit(Callable)");
                 return "result";
             }
         });
         try {
-            LogUtil.e("Result from submit(callable) is " + futureResult.get());
+            LogUtil.INSTANCE.e("Result from submit(callable) is " + futureResult.get());
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
@@ -70,7 +70,7 @@ class AllExecutorServiceMethodsDemo implements DemoStartable {
     private void invokeAnyDemo(@NonNull ExecutorService executorService) {
         try {
             String result = executorService.invokeAny(ThreadDemoUtil.createTestTasksList(10));
-            LogUtil.e("ExecutorService.invokeAny() - result of execution is: " + result);
+            LogUtil.INSTANCE.e("ExecutorService.invokeAny() - result of execution is: " + result);
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
@@ -80,7 +80,7 @@ class AllExecutorServiceMethodsDemo implements DemoStartable {
         try {
             final List<Future<String>> futureList = executorService.invokeAll(ThreadDemoUtil.createTestTasksList(10));
             for (Future<String> f : futureList) {
-                LogUtil.e("Future result is: " + f.get());
+                LogUtil.INSTANCE.e("Future result is: " + f.get());
             }
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();

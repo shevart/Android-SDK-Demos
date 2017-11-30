@@ -80,7 +80,7 @@ public class HandlerDelayedActivity extends AbsActivity {
     }
 
     private void printDelayedMessage(@NonNull String msg) {
-        UiNotificationsUtils.showEmptyToast(this, msg);
+        UiNotificationsUtils.showToast(this, msg);
     }
 
     @Override

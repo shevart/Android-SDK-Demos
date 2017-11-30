@@ -63,4 +63,7 @@
     <string name="first_test_task">First test task</string>
     <string name="thread_number_pattern">Thread number: %d</string>
     <string name="prime_number_generated_pattern">prime number generated: %d</string>
+    <string name="arch_components">Arch components</string>
+    <string name="viewmodel">ViewModel</string>
+    <string name="livedata">LiveData</string>
 </resources>

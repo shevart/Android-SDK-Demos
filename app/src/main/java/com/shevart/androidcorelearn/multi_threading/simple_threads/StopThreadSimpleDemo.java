@@ -28,7 +28,7 @@ class StopThreadSimpleDemo implements DemoStartable {
     private static class WorkerThread extends Thread {
         @Override
         public void run() {
-            LogUtil.e("WorkerThread - go to work!");
+            LogUtil.INSTANCE.e("WorkerThread - go to work!");
             while (true) {
                 if (isInterrupted())
                     break;
@@ -40,7 +40,7 @@ class StopThreadSimpleDemo implements DemoStartable {
                     break;
                 }
             }
-            LogUtil.e("WorkerThread - go from work!");
+            LogUtil.INSTANCE.e("WorkerThread - go from work!");
         }
     }
 
@@ -55,11 +55,11 @@ class StopThreadSimpleDemo implements DemoStartable {
         public void run() {
             try {
                 sleep(2000);
-                LogUtil.e("-- stop WorkerThread");
+                LogUtil.INSTANCE.e("-- stop WorkerThread");
                 threadWhichIMustStop.interrupt();
             } catch (InterruptedException e) {
                 e.printStackTrace();
-                LogUtil.e("-- unexpected stop WorkerThread");
+                LogUtil.INSTANCE.e("-- unexpected stop WorkerThread");
                 threadWhichIMustStop.interrupt();
             }
         }

@@ -28,7 +28,7 @@ public class IntervalsXMLParser {
 
         // retrieve Intervals list XML
         String intervalsListXMLPart = XMLParserUtil.retrieveFirstElementContent(s, LIST_TAG);
-        LogUtil.e(intervalsListXMLPart);
+        LogUtil.INSTANCE.e(intervalsListXMLPart);
 
         // while XML list contains Intervals parse it
         while (XMLParserUtil.isContainsElementByTagName(intervalsListXMLPart, INTERVAL_TAG)) {
