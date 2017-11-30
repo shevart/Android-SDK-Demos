@@ -44,7 +44,7 @@
             android:text="@string/bound" />
 
         <RadioButton
-            android:id="@+id/rbUnounded"
+            android:id="@+id/rbUnbounded"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

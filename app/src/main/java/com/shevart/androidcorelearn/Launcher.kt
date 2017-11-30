@@ -7,6 +7,7 @@ import com.shevart.androidcorelearn.arch_components.livedata.LiveDataDemoActivit
 import com.shevart.androidcorelearn.arch_components.viewmodel.SimpleViewModelSampleActivity
 import com.shevart.androidcorelearn.fragments.FragmentsDemoActivity
 import com.shevart.androidcorelearn.multi_threading.MultiThreadingDemoActivity
+import com.shevart.androidcorelearn.service.BinderServiceActivity
 
 import com.shevart.androidcorelearn.service.ServiceLearnActivity
 
@@ -33,6 +34,10 @@ object Launcher {
 
     fun liveDataDemo(activity: Activity) {
         startActivity(activity, LiveDataDemoActivity::class.java)
+    }
+
+    fun binderServiceDemo(activity: Activity) {
+        startActivity(activity, BinderServiceActivity::class.java)
     }
 
     private fun startActivity(activity: Activity, clazz: Class<out Activity>) {
