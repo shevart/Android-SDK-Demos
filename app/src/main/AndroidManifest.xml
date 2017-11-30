@@ -61,7 +61,8 @@
         <service android:name=".service.BinderService" />
 
         <activity android:name=".arch_components.ArchComponentsActivity" />
-        <activity android:name=".arch_components.viewmodel.SimpleViewModelSampleActivity"></activity>
+        <activity android:name=".arch_components.viewmodel.SimpleViewModelSampleActivity" />
+        <activity android:name=".arch_components.livedata.LiveDataDemoActivity" />
     </application>
 
 </manifest>
