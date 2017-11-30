@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.shevart.androidcorelearn.Launcher;
 import com.shevart.androidcorelearn.R;
 import com.shevart.androidcorelearn.common.AbsActivity;
 import com.shevart.androidcorelearn.service.service_not_sticky.NotStickyService;
