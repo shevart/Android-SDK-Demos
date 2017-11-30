@@ -29,6 +29,5 @@ public class ArchComponentsActivity extends AbsActivity {
         enableToolbarBackButton();
 
         findViewById(R.id.btViewModelTopic).setOnClickListener(clickListener);
-
     }
 }

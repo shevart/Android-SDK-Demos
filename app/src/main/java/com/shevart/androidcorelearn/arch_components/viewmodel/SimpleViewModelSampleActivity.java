@@ -22,6 +22,7 @@ import java.util.List;
 public class SimpleViewModelSampleActivity extends AbsActivity implements SimpleItemsRVAdapter.OnSimpleItemSelectedListener {
     private ProgressBar pbViewModelSampleLoading;
     private RecyclerView rvViewModelSample;
+    private SimpleItemsRVAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,13 +30,9 @@ public class SimpleViewModelSampleActivity extends AbsActivity implements Simple
         setContentView(R.layout.activity_simple_view_model_sample);
         enableToolbarBackButton();
 
-        pbViewModelSampleLoading = findViewById(R.id.pbViewModelSampleLoading);
-        rvViewModelSample = findViewById(R.id.rvViewModelSample);
-        final SimpleItemsRVAdapter adapter = new SimpleItemsRVAdapter(this, new ArrayList<SimpleItem>());
-        rvViewModelSample.setLayoutManager(new LinearLayoutManager(this));
-        rvViewModelSample.setAdapter(adapter);
-
+        initViews();
         showLoading();
+
         MyViewModel viewModel = ViewModelProviders.of(this).get(MyViewModel.class);
         viewModel.getListLiveData().observe(this, new Observer<List<SimpleItem>>() {
             @Override
@@ -43,6 +40,14 @@ public class SimpleViewModelSampleActivity extends AbsActivity implements Simple
                 onSimpleItemsLoaded(simpleItems, adapter);
             }
         });
+    }
+
+    private void initViews() {
+        pbViewModelSampleLoading = findViewById(R.id.pbViewModelSampleLoading);
+        rvViewModelSample = findViewById(R.id.rvViewModelSample);
+        adapter = new SimpleItemsRVAdapter(this, new ArrayList<SimpleItem>());
+        rvViewModelSample.setLayoutManager(new LinearLayoutManager(this));
+        rvViewModelSample.setAdapter(adapter);
     }
 
     private void onSimpleItemsLoaded(@Nullable List<SimpleItem> simpleItems, SimpleItemsRVAdapter adapter) {
