@@ -64,7 +64,9 @@
         <activity android:name=".arch_components.viewmodel.SimpleViewModelSampleActivity" />
         <activity android:name=".arch_components.livedata.LiveDataDemoActivity" />
         <activity android:name=".animation.AndroidAnimationsTopicsMenuActivity" />
-        <activity android:name=".animation.transition.TransitionAnimationActivity"></activity>
+        <activity android:name=".animation.transition.TransitionAnimationActivity" />
+        <activity android:name=".animation.transition.sharedviews.SharedViewsStartActivity" />
+        <activity android:name=".animation.transition.sharedviews.SharedViewsFinishActivity"></activity>
     </application>
 
 </manifest>
