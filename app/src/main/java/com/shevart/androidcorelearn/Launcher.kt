@@ -5,6 +5,7 @@ import android.content.Intent
 import com.shevart.androidcorelearn.arch_components.ArchComponentsActivity
 import com.shevart.androidcorelearn.arch_components.livedata.LiveDataDemoActivity
 import com.shevart.androidcorelearn.arch_components.viewmodel.SimpleViewModelSampleActivity
+import com.shevart.androidcorelearn.common.AutoClosableActivity
 import com.shevart.androidcorelearn.fragments.FragmentsDemoActivity
 import com.shevart.androidcorelearn.multi_threading.MultiThreadingDemoActivity
 import com.shevart.androidcorelearn.service.BinderServiceActivity
@@ -38,6 +39,10 @@ object Launcher {
 
     fun binderServiceDemo(activity: Activity) {
         startActivity(activity, BinderServiceActivity::class.java)
+    }
+
+    fun autoClosableScreen(activity: Activity) {
+        startActivity(activity, AutoClosableActivity::class.java)
     }
 
     private fun startActivity(activity: Activity, clazz: Class<out Activity>) {

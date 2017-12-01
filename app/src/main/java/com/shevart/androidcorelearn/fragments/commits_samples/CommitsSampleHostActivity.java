@@ -9,9 +9,10 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import com.shevart.androidcorelearn.Launcher;
 import com.shevart.androidcorelearn.R;
 import com.shevart.androidcorelearn.common.AbsActivity;
-import com.shevart.androidcorelearn.common.AutoClosableActivity;
+
 import com.shevart.androidcorelearn.utils.LogUtil;
 import com.shevart.androidcorelearn.utils.UiNotificationsUtils;
 
@@ -33,7 +34,7 @@ public class CommitsSampleHostActivity extends AbsActivity {
         @Override
         public void onClick(View v) {
             if (cbOpenActivityBeforeCommits.isChecked()) {
-                startActivity(new Intent(CommitsSampleHostActivity.this, AutoClosableActivity.class));
+                Launcher.INSTANCE.autoClosableScreen(CommitsSampleHostActivity.this);
                 switch (v.getId()) {
                     case R.id.btCommit:
                         commitsHandler.sendEmptyMessageDelayed(CommitsHandler.WHAT_COMMIT, DELAY);
