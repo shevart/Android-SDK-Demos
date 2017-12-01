@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
             R.id.btFragmentsTopic -> Launcher.fragmentsTopic(this)
             R.id.btMultiThreads -> Launcher.multiThreadingTopic(this)
             R.id.btArchComponents -> Launcher.archComponents(this)
+            R.id.btAnimationTopic -> Launcher.animationTopic(this)
             else -> throw IllegalArgumentException("Handle it!")
         }
     }
@@ -24,5 +25,6 @@ class MainActivity : AppCompatActivity() {
         btFragmentsTopic.setOnClickListener(launcherClickListener)
         btMultiThreads.setOnClickListener(launcherClickListener)
         btArchComponents.setOnClickListener(launcherClickListener)
+        btAnimationTopic.setOnClickListener(launcherClickListener)
     }
 }

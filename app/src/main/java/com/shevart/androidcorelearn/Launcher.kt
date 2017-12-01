@@ -2,6 +2,8 @@ package com.shevart.androidcorelearn
 
 import android.app.Activity
 import android.content.Intent
+import com.shevart.androidcorelearn.animation.AndroidAnimationsTopicsMenuActivity
+import com.shevart.androidcorelearn.animation.transition.TransitionAnimationActivity
 import com.shevart.androidcorelearn.arch_components.ArchComponentsActivity
 import com.shevart.androidcorelearn.arch_components.livedata.LiveDataDemoActivity
 import com.shevart.androidcorelearn.arch_components.viewmodel.SimpleViewModelSampleActivity
@@ -43,6 +45,14 @@ object Launcher {
 
     fun autoClosableScreen(activity: Activity) {
         startActivity(activity, AutoClosableActivity::class.java)
+    }
+
+    fun animationTopic(activity: Activity) {
+        startActivity(activity, AndroidAnimationsTopicsMenuActivity::class.java)
+    }
+
+    fun transitionAnimation(activity: Activity) {
+        startActivity(activity, TransitionAnimationActivity::class.java)
     }
 
     private fun startActivity(activity: Activity, clazz: Class<out Activity>) {

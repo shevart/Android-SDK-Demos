@@ -33,7 +33,7 @@ class MobileAndTabletUIFragmentsDemoActivity : AbsActivity() {
         }
     }
 
-    internal fun onItemSelected(item: SimpleItem) {
+    fun onItemSelected(item: SimpleItem) {
         if (fragmentDetail != null) {
             fragmentDetail!!.update(item)
         } else {

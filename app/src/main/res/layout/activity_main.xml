@@ -27,4 +27,9 @@
         android:id="@+id/btArchComponents"
         style="@style/ACLBaseWidget.Button.OpenTopic"
         android:text="@string/arch_components" />
+
+    <Button
+        android:id="@+id/btAnimationTopic"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/animations" />
 </LinearLayout>

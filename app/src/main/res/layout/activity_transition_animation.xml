@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ACLBaseWidget.LinearLayout.TopicMenu"
+    tools:context="com.shevart.androidcorelearn.animation.transition.TransitionAnimationActivity">
+
+    <TextView
+        style="@style/ACLBaseWidget.TextView.TopicTitle"
+        android:text="@string/select_topic" />
+
+    <Button
+        android:id="@+id/btScreenSharedElements"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/shared_elements" />
+
+</LinearLayout>

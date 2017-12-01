@@ -63,6 +63,8 @@
         <activity android:name=".arch_components.ArchComponentsActivity" />
         <activity android:name=".arch_components.viewmodel.SimpleViewModelSampleActivity" />
         <activity android:name=".arch_components.livedata.LiveDataDemoActivity" />
+        <activity android:name=".animation.AndroidAnimationsTopicsMenuActivity" />
+        <activity android:name=".animation.transition.TransitionAnimationActivity"></activity>
     </application>
 
 </manifest>
