@@ -54,7 +54,7 @@ public class TestTask1Activity extends AbsActivity {
     }
 
     private void showError(@NonNull String error) {
-        UiNotificationsUtils.showToast(this, error);
+        UiNotificationsUtils.INSTANCE.showToast(this, error);
     }
 
     private void addNewPrimeNumber(@NonNull PrimeNumber primeNumber) {

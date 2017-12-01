@@ -18,7 +18,7 @@ public class ExecutorsDemoActivity extends AbsActivity {
     private View.OnClickListener buttonsClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            UiNotificationsUtils.Extra.developerSeeToLogsMsg(ExecutorsDemoActivity.this);
+            UiNotificationsUtils.Extra.INSTANCE.INSTANCE.developerSeeToLogsMsg(ExecutorsDemoActivity.this);
             switch (v.getId()) {
                 case R.id.btSimpleQueueExecutor:
                     asyncQueueExecutorDemo.startDemo();

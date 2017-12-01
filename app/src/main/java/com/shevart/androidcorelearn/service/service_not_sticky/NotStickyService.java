@@ -14,14 +14,14 @@ public class NotStickyService extends Service {
 
     @Override
     public void onCreate() {
-        UiNotificationsUtils.showDevMessage(this, "onCreate()");
+        UiNotificationsUtils.INSTANCE.showDevMessage(this, "onCreate()");
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        UiNotificationsUtils.showDevMessage(this, "onStartCommand()");
+        UiNotificationsUtils.INSTANCE.showDevMessage(this, "onStartCommand()");
         tellAboutFlags(flags);
-        UiNotificationsUtils.showDevMessage(this, "startId: " + startId);
+        UiNotificationsUtils.INSTANCE.showDevMessage(this, "startId: " + startId);
         longRunningTask();
         return START_NOT_STICKY;
     }
@@ -29,13 +29,13 @@ public class NotStickyService extends Service {
     private void tellAboutFlags(int flags) {
         switch (flags) {
             case 0:
-                UiNotificationsUtils.showDevMessage(this, "flags is default value, 0");
+                UiNotificationsUtils.INSTANCE.showDevMessage(this, "flags is default value, 0");
                 break;
             case START_FLAG_REDELIVERY:
-                UiNotificationsUtils.showDevMessage(this, "flags is START_FLAG_REDELIVERY");
+                UiNotificationsUtils.INSTANCE.showDevMessage(this, "flags is START_FLAG_REDELIVERY");
                 break;
             case START_FLAG_RETRY:
-                UiNotificationsUtils.showDevMessage(this, "flags is START_FLAG_RETRY");
+                UiNotificationsUtils.INSTANCE.showDevMessage(this, "flags is START_FLAG_RETRY");
                 break;
             default:
                 throw new IllegalArgumentException("Handle it! Flags is " + flags);
@@ -54,6 +54,6 @@ public class NotStickyService extends Service {
 
     @Override
     public void onDestroy() {
-        UiNotificationsUtils.showDevMessage(this, "onDestroy()");
+        UiNotificationsUtils.INSTANCE.showDevMessage(this, "onDestroy()");
     }
 }

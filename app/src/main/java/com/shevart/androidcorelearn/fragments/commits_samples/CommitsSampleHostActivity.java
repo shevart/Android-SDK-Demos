@@ -95,7 +95,7 @@ public class CommitsSampleHostActivity extends AbsActivity {
 
 
     private void sampleCommit() {
-        UiNotificationsUtils.showDevMessage(this, "sampleCommit()");
+        UiNotificationsUtils.INSTANCE.showDevMessage(this, "sampleCommit()");
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.flCommitsContainer, nextDetailSimpleItemFragment())
@@ -103,7 +103,7 @@ public class CommitsSampleHostActivity extends AbsActivity {
     }
 
     private void sampleCommitAllowingStateLoss() {
-        UiNotificationsUtils.showDevMessage(this, "sampleCommitAllowingStateLoss()");
+        UiNotificationsUtils.INSTANCE.showDevMessage(this, "sampleCommitAllowingStateLoss()");
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.flCommitsContainer, nextDetailSimpleItemFragment())
@@ -111,7 +111,7 @@ public class CommitsSampleHostActivity extends AbsActivity {
     }
 
     private void sampleCommitNow() {
-        UiNotificationsUtils.showDevMessage(this, "sampleCommitNow()");
+        UiNotificationsUtils.INSTANCE.showDevMessage(this, "sampleCommitNow()");
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.flCommitsContainer, nextDetailSimpleItemFragment())
@@ -119,7 +119,7 @@ public class CommitsSampleHostActivity extends AbsActivity {
     }
 
     private void sampleCommitNowAllowingStateLoss() {
-        UiNotificationsUtils.showDevMessage(this, "sampleCommitNowAllowingStateLoss()");
+        UiNotificationsUtils.INSTANCE.showDevMessage(this, "sampleCommitNowAllowingStateLoss()");
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.flCommitsContainer, nextDetailSimpleItemFragment())

@@ -92,6 +92,6 @@ public class FragmentTransactionsActivity extends AbsActivity {
         if (fragment != null)
             FragmentUtil.removeFragment(getSupportFragmentManager(), fragment, backStack);
         else
-            UiNotificationsUtils.showDevMessage(this, "There is no fragments!");
+            UiNotificationsUtils.INSTANCE.showDevMessage(this, "There is no fragments!");
     }
 }

@@ -28,7 +28,7 @@ public class AutoClosableActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         // super.onBackPressed();
-        UiNotificationsUtils.showDevMessage(this,
+        UiNotificationsUtils.INSTANCE.showDevMessage(this,
                 getString(R.string.wait_few_seconds_this_screen_will_be_automatically_closed));
     }
 }
