@@ -69,4 +69,6 @@
     <string name="transition">Transition</string>
     <string name="shared_elements">Shared elements</string>
     <string name="animations">Animations</string>
+    <string name="avatar_transition">avatar_transition</string>
+    <string name="open_detail">Open detail</string>
 </resources>

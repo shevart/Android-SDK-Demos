@@ -60,13 +60,25 @@
         <service android:name=".service.service_not_sticky.NotStickyService" />
         <service android:name=".service.BinderService" />
 
-        <activity android:name=".arch_components.ArchComponentsActivity" />
+        <activity
+            android:name=".arch_components.ArchComponentsActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".arch_components.viewmodel.SimpleViewModelSampleActivity" />
         <activity android:name=".arch_components.livedata.LiveDataDemoActivity" />
-        <activity android:name=".animation.AndroidAnimationsTopicsMenuActivity" />
-        <activity android:name=".animation.transition.TransitionAnimationActivity" />
-        <activity android:name=".animation.transition.sharedviews.SharedViewsStartActivity" />
-        <activity android:name=".animation.transition.sharedviews.SharedViewsFinishActivity"></activity>
+        <activity
+            android:name=".animation.AndroidAnimationsTopicsMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".animation.transition.TransitionAnimationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".animation.transition.sharedviews.SharedViewsStartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.MaterialAnimation.SharedViews" />
+        <activity
+            android:name=".animation.transition.sharedviews.SharedViewsFinishActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.MaterialAnimation.SharedViews" />
     </application>
 
 </manifest>
