@@ -7,4 +7,15 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="AppTheme.MaterialAnimation"/>
+
+    <style name="AppTheme.MaterialAnimation.SharedViews">
+        <!-- enable animations -->
+        <item name="android:windowContentTransitions">true</item>
+
+        <!-- set default animations for sharedViews between activities -->
+        <item name="android:windowSharedElementEnterTransition">@transition/change_bounds</item>
+        <item name="android:windowSharedElementExitTransition">@transition/change_bounds</item>
+    </style>
 </resources>
