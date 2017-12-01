@@ -11,6 +11,8 @@ import com.shevart.androidcorelearn.arch_components.viewmodel.SimpleViewModelSam
 import com.shevart.androidcorelearn.common.AutoClosableActivity
 import com.shevart.androidcorelearn.fragments.FragmentsDemoActivity
 import com.shevart.androidcorelearn.multi_threading.MultiThreadingDemoActivity
+import com.shevart.androidcorelearn.multi_threading.handler_looper.handler_background_worker_sample.HandlerBackgroundWorkerSampleActivity
+import com.shevart.androidcorelearn.multi_threading.handler_looper.handler_delayed_messages.HandlerDelayedActivity
 import com.shevart.androidcorelearn.service.BinderServiceActivity
 
 import com.shevart.androidcorelearn.service.ServiceLearnActivity
@@ -58,6 +60,14 @@ object Launcher {
 
     fun sharedElementsAnimation(activity: Activity) {
         startActivity(activity, SharedViewsStartActivity::class.java)
+    }
+
+    fun simpleHandlerSample(activity: Activity) {
+        startActivity(activity, HandlerBackgroundWorkerSampleActivity::class.java)
+    }
+
+    fun handlerDelayedMessage(activity: Activity) {
+        startActivity(activity, HandlerDelayedActivity::class.java)
     }
 
     private fun startActivity(activity: Activity, clazz: Class<out Activity>) {

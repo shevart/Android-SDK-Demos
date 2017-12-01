@@ -61,7 +61,7 @@ class WorkerThread extends Thread {
     // deliver result back to UI
     private void onJobComplete(int jobId) {
         final Message message = responseHandler.obtainMessage(
-                HandlerBackgroundWorkerSampleActivity.ON_JOB_COMPLETE_WHAT, jobId, 0);
+                HandlerBackgroundWorkerSampleActivity.Companion.getON_JOB_COMPLETE_WHAT(), jobId, 0);
         responseHandler.sendMessage(message);
     }
 }
