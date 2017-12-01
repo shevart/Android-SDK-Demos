@@ -54,7 +54,7 @@ class WorkerThread extends Thread {
 
     // fake long-running operation
     private void runJob(int jobId) {
-        ThreadDemoUtil.sleep1000ms();
+        ThreadDemoUtil.INSTANCE.sleep1000ms();
         onJobComplete(jobId);
     }
 

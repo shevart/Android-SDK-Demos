@@ -10,7 +10,7 @@ class SingleThreadExecutorDemo implements DemoStartable {
     @Override
     public void startDemo() {
         final ExecutorService executorService = Executors.newSingleThreadExecutor();
-        ThreadDemoUtil.sendEmptyTasksToExecutor50(executorService);
+        ThreadDemoUtil.INSTANCE.sendEmptyTasksToExecutor50(executorService);
         executorService.shutdown();
     }
 }

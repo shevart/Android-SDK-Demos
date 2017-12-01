@@ -46,7 +46,7 @@ class FutureTaskDemo implements DemoStartable {
         return new FutureTask<>(new Callable<String>() {
             @Override
             public String call() throws Exception {
-                ThreadDemoUtil.sleep1000ms();
+                ThreadDemoUtil.INSTANCE.sleep1000ms();
                 return "result";
             }
         });

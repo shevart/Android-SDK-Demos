@@ -72,7 +72,7 @@ class PrimeNumberStoringThread extends Thread {
         PrimeNumber primeNumber = bridge.getPrimeNumber();
         if (primeNumber != null) {
             // fake delay - todo add interrupt handling in the future
-            ThreadDemoUtil.sleep500ms();
+            ThreadDemoUtil.INSTANCE.sleep500ms();
             primeNumbersCallback.onNewPrimeNumberFound(primeNumber);
         } else {
             handleError();

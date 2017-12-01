@@ -1,6 +1,5 @@
 package com.shevart.androidcorelearn.fragments.commits_samples;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -12,14 +11,12 @@ import android.widget.TextView;
 import com.shevart.androidcorelearn.Launcher;
 import com.shevart.androidcorelearn.R;
 import com.shevart.androidcorelearn.common.AbsActivity;
-
 import com.shevart.androidcorelearn.utils.LogUtil;
 import com.shevart.androidcorelearn.utils.UiNotificationsUtils;
+import com.shevart.androidcorelearn.utils.UiScreenMockUtils;
 
 import java.lang.ref.WeakReference;
 import java.util.Locale;
-
-import static com.shevart.androidcorelearn.utils.UiScreenMockUtils.nextDetailSimpleItemFragment;
 
 public class CommitsSampleHostActivity extends AbsActivity {
     private static final String LIFECYCLE_PATTERN = "Current state: %s";
@@ -85,8 +82,8 @@ public class CommitsSampleHostActivity extends AbsActivity {
     }
 
     private void initView() {
-        tvLifecycleState = (TextView) findViewById(R.id.tvLifecycleState);
-        cbOpenActivityBeforeCommits = (CheckBox) findViewById(R.id.cbOpenActivityBeforeCommits);
+        tvLifecycleState = findViewById(R.id.tvLifecycleState);
+        cbOpenActivityBeforeCommits = findViewById(R.id.cbOpenActivityBeforeCommits);
         findViewById(R.id.btCommit).setOnClickListener(buttonsClickListener);
         findViewById(R.id.btCommitAllowingStateLoss).setOnClickListener(buttonsClickListener);
         findViewById(R.id.btCommitNow).setOnClickListener(buttonsClickListener);
@@ -94,12 +91,11 @@ public class CommitsSampleHostActivity extends AbsActivity {
     }
 
 
-
     private void sampleCommit() {
         UiNotificationsUtils.INSTANCE.showDevMessage(this, "sampleCommit()");
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.flCommitsContainer, nextDetailSimpleItemFragment())
+                .replace(R.id.flCommitsContainer, UiScreenMockUtils.INSTANCE.nextDetailSimpleItemFragment())
                 .commit();
     }
 
@@ -107,7 +103,7 @@ public class CommitsSampleHostActivity extends AbsActivity {
         UiNotificationsUtils.INSTANCE.showDevMessage(this, "sampleCommitAllowingStateLoss()");
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.flCommitsContainer, nextDetailSimpleItemFragment())
+                .replace(R.id.flCommitsContainer, UiScreenMockUtils.INSTANCE.nextDetailSimpleItemFragment())
                 .commitAllowingStateLoss();
     }
 
@@ -115,7 +111,7 @@ public class CommitsSampleHostActivity extends AbsActivity {
         UiNotificationsUtils.INSTANCE.showDevMessage(this, "sampleCommitNow()");
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.flCommitsContainer, nextDetailSimpleItemFragment())
+                .replace(R.id.flCommitsContainer, UiScreenMockUtils.INSTANCE.nextDetailSimpleItemFragment())
                 .commitNow();
     }
 
@@ -123,7 +119,7 @@ public class CommitsSampleHostActivity extends AbsActivity {
         UiNotificationsUtils.INSTANCE.showDevMessage(this, "sampleCommitNowAllowingStateLoss()");
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.flCommitsContainer, nextDetailSimpleItemFragment())
+                .replace(R.id.flCommitsContainer, UiScreenMockUtils.INSTANCE.nextDetailSimpleItemFragment())
                 .commitNowAllowingStateLoss();
     }
 

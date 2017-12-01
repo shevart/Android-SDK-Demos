@@ -12,6 +12,6 @@ class SimpleQueueExecutorDemo implements DemoStartable {
             simpleAsyncQueueExecutor = new SimpleAsyncQueueExecutor();
         }
 
-        ThreadDemoUtil.sendEmptyTasksToExecutor5(simpleAsyncQueueExecutor);
+        ThreadDemoUtil.INSTANCE.sendEmptyTasksToExecutor5(simpleAsyncQueueExecutor);
     }
 }

@@ -19,8 +19,8 @@ public class FragmentLifecycleDemoActivity extends AbsActivity {
         enableToolbarBackButton();
 
         UiNotificationsUtils.INSTANCE.showToast(this, "See logs!");
-        LifecycleLogUtil.logMessage(TAG, "onCreate()");
-        FragmentUtil.addFragment(getSupportFragmentManager(),
+        LifecycleLogUtil.INSTANCE.logMessage(TAG, "onCreate()");
+        FragmentUtil.INSTANCE.addFragment(getSupportFragmentManager(),
                 new LifecycleAddedDemoFragmentFragment(),
                 R.id.flFragmentLifecycleContainer);
     }
@@ -28,48 +28,48 @@ public class FragmentLifecycleDemoActivity extends AbsActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        LifecycleLogUtil.logMessage(TAG, "onSaveInstanceState()");
+        LifecycleLogUtil.INSTANCE.logMessage(TAG, "onSaveInstanceState()");
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        LifecycleLogUtil.logMessage(TAG, "onRestoreInstanceState()");
+        LifecycleLogUtil.INSTANCE.logMessage(TAG, "onRestoreInstanceState()");
     }
 
     @Override
     public void onAttachFragment(Fragment fragment) {
         super.onAttachFragment(fragment);
-        LifecycleLogUtil.logMessage(TAG, "onAttachFragment(), " + fragment.getClass().getSimpleName());
+        LifecycleLogUtil.INSTANCE.logMessage(TAG, "onAttachFragment(), " + fragment.getClass().getSimpleName());
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        LifecycleLogUtil.logMessage(TAG, "onStart()");
+        LifecycleLogUtil.INSTANCE.logMessage(TAG, "onStart()");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        LifecycleLogUtil.logMessage(TAG, "onResume()");
+        LifecycleLogUtil.INSTANCE.logMessage(TAG, "onResume()");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        LifecycleLogUtil.logMessage(TAG, "onPause()");
+        LifecycleLogUtil.INSTANCE.logMessage(TAG, "onPause()");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        LifecycleLogUtil.logMessage(TAG, "onStop()");
+        LifecycleLogUtil.INSTANCE.logMessage(TAG, "onStop()");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        LifecycleLogUtil.logMessage(TAG, "onDestroy()");
+        LifecycleLogUtil.INSTANCE.logMessage(TAG, "onDestroy()");
     }
 }

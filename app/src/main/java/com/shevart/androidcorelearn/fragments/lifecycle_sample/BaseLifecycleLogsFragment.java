@@ -128,7 +128,7 @@ public abstract class BaseLifecycleLogsFragment extends Fragment {
      * @param msg - String which will be print in logs
      */
     protected void logMessage(@NonNull String msg) {
-        LifecycleLogUtil.logMessage(provideFragmentName(), msg);
+        LifecycleLogUtil.INSTANCE.logMessage(provideFragmentName(), msg);
     }
 
     protected abstract String provideFragmentName();

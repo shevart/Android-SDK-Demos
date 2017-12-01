@@ -10,7 +10,7 @@ class FixedThreadPoolDemo implements DemoStartable {
     @Override
     public void startDemo() {
         final ExecutorService executorService = Executors.newFixedThreadPool(4);
-        ThreadDemoUtil.sendEmptyTasksToExecutor50(executorService);
+        ThreadDemoUtil.INSTANCE.sendEmptyTasksToExecutor50(executorService);
         executorService.shutdown();
     }
 }

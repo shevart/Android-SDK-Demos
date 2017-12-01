@@ -29,7 +29,7 @@ class FragmentsDemoActivity : AbsActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fragments_demo)
         enableToolbarBackButton()
-        
+
         btFragmentsLifecycle.setOnClickListener(clickListener)
         btMobileAndTabletFragmentsUi.setOnClickListener(clickListener)
         btCommitsSample.setOnClickListener(clickListener)

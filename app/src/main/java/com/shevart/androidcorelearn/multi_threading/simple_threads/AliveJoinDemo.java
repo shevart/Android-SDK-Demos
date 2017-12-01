@@ -25,7 +25,7 @@ class AliveJoinDemo implements DemoStartable {
     private static class ThreadA extends Thread {
         @Override
         public void run() {
-            ThreadDemoUtil.sleep2000ms();
+            ThreadDemoUtil.INSTANCE.sleep2000ms();
         }
     }
 
@@ -38,7 +38,7 @@ class AliveJoinDemo implements DemoStartable {
 
         @Override
         public void run() {
-            ThreadDemoUtil.sleep500ms();
+            ThreadDemoUtil.INSTANCE.sleep500ms();
             LogUtil.INSTANCE.e("ThreadB - check isAlive()");
             if (thread.isAlive()) {
                 LogUtil.INSTANCE.e("ThreadB - isAlive() = true");
