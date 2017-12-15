@@ -11,6 +11,7 @@ class TransitionAnimationActivity : AbsActivity() {
     private val clickListener = View.OnClickListener {
         when (it.id) {
             R.id.btScreenSharedElements -> Launcher.sharedElementsAnimation(this)
+            R.id.btScreenSharedUI -> Launcher.sharedUIElementsAnimation(this)
             else -> throw IllegalArgumentException("Handle it!")
         }
     }
@@ -21,5 +22,6 @@ class TransitionAnimationActivity : AbsActivity() {
         enableToolbarBackButton()
 
         btScreenSharedElements.setOnClickListener(clickListener)
+        btScreenSharedUI.setOnClickListener(clickListener)
     }
 }

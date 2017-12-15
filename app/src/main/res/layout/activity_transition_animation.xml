@@ -13,4 +13,9 @@
         style="@style/ACLBaseWidget.Button.OpenTopic"
         android:text="@string/shared_elements" />
 
+    <Button
+        android:id="@+id/btScreenSharedUI"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/shared_ui_elements" />
+
 </LinearLayout>

@@ -5,6 +5,7 @@ import android.content.Intent
 import com.shevart.androidcorelearn.animation.AndroidAnimationsTopicsMenuActivity
 import com.shevart.androidcorelearn.animation.transition.TransitionAnimationActivity
 import com.shevart.androidcorelearn.animation.transition.sharedviews.SharedViewsStartActivity
+import com.shevart.androidcorelearn.animation.transition.sharedviewsui.SharedUIStartActivity
 import com.shevart.androidcorelearn.arch_components.ArchComponentsActivity
 import com.shevart.androidcorelearn.arch_components.livedata.LiveDataDemoActivity
 import com.shevart.androidcorelearn.arch_components.viewmodel.SimpleViewModelSampleActivity
@@ -60,6 +61,10 @@ object Launcher {
 
     fun sharedElementsAnimation(activity: Activity) {
         startActivity(activity, SharedViewsStartActivity::class.java)
+    }
+
+    fun sharedUIElementsAnimation(activity: Activity) {
+        startActivity(activity, SharedUIStartActivity::class.java)
     }
 
     fun simpleHandlerSample(activity: Activity) {

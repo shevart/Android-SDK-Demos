@@ -14,6 +14,10 @@ abstract class AbsActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowHomeEnabled(false)
     }
 
+    protected fun hideToolbar() {
+        supportActionBar?.hide()
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
             finish()
