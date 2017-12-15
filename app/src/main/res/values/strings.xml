@@ -71,4 +71,8 @@
     <string name="animations">Animations</string>
     <string name="avatar_transition">avatar_transition</string>
     <string name="open_detail">Open detail</string>
+    <string name="select">Select</string>
+    <string name="shared_ui_icon">shared_ui_icon</string>
+    <string name="shared_ui_text">shared_ui_text</string>
+    <string name="shared_ui_view">shared_ui_view</string>
 </resources>

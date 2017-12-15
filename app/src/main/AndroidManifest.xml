@@ -79,6 +79,8 @@
             android:name=".animation.transition.sharedviews.SharedViewsFinishActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.MaterialAnimation.SharedViews" />
+        <activity android:name=".animation.transition.sharedviewsui.SharedUIStartActivity" />
+        <activity android:name=".animation.transition.sharedviewsui.SharedUIFinishActivity"></activity>
     </application>
 
 </manifest>

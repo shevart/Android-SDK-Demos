@@ -32,6 +32,7 @@ dependencies {
     compile "com.android.support:appcompat-v7:$google_api_vers"
     compile "com.android.support:recyclerview-v7:$google_api_vers"
     compile "com.android.support:support-v4:$google_api_vers"
+    compile "com.android.support:cardview-v7:$google_api_vers"
     implementation "android.arch.lifecycle:extensions:$arch_components_vers"
     // test dependencies
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {

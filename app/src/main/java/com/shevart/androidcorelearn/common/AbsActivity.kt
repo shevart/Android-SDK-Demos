@@ -5,13 +5,13 @@ import android.view.MenuItem
 
 abstract class AbsActivity : AppCompatActivity() {
     protected fun enableToolbarBackButton() {
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
     }
 
     protected fun disableToolbarBackButton() {
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        supportActionBar?.setDisplayShowHomeEnabled(false)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

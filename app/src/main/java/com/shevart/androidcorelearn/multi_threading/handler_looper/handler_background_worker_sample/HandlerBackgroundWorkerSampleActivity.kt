@@ -9,8 +9,8 @@ import kotlinx.android.synthetic.main.activity_handler_background_worker_sample.
 import java.util.*
 
 class HandlerBackgroundWorkerSampleActivity : AbsActivity() {
-    private var workerThread: WorkerThread? = null
-    private var uiHandler: Handler? = null
+    private lateinit var workerThread: WorkerThread
+    private lateinit var uiHandler: Handler
     private var jobId = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,19 +29,19 @@ class HandlerBackgroundWorkerSampleActivity : AbsActivity() {
             }
         }
 
-        workerThread = WorkerThread(uiHandler!!)
-        workerThread!!.start()
+        workerThread = WorkerThread(uiHandler)
+        workerThread.start()
 
         btRunJob.setOnClickListener { passToWorkerThreadSomeJob() }
     }
 
     private fun passToWorkerThreadSomeJob() {
-        workerThread!!.runSomeJob(jobId++)
+        workerThread.runSomeJob(jobId++)
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        workerThread!!.stopWork()
+        workerThread.stopWork()
     }
 
     companion object {

@@ -22,7 +22,7 @@ class SharedViewsStartActivity : AbsActivity() {
         val intent = Intent(this, SharedViewsFinishActivity::class.java)
         // Pass data object in the bundle and populate details activity.
         val options = ActivityOptionsCompat
-                .makeSceneTransitionAnimation(this, ivSmallAvatar as View, getString(R.string.avatar_transition))
+                .makeSceneTransitionAnimation(this, ivSmallAvatar, getString(R.string.avatar_transition))
         startActivity(intent, options.toBundle())
     }
 }
