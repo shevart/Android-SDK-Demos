@@ -82,11 +82,11 @@
         <activity
             android:name=".animation.transition.sharedviewsui.SharedUIStartActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.MaterialAnimation.SharedViews" />
+            android:theme="@style/AppTheme.MaterialAnimation.SharedViews.UI" />
         <activity
             android:name=".animation.transition.sharedviewsui.SharedUIFinishActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.MaterialAnimation.SharedViews" />
+            android:theme="@style/AppTheme.MaterialAnimation.SharedViews.UI" />
     </application>
 
 </manifest>
