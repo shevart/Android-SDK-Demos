@@ -3,5 +3,21 @@
     android:duration="4000"
     android:interpolator="@android:interpolator/decelerate_cubic">
 
-    <changeBounds />
+    <!--<changeBounds />-->
+
+    <fade
+        android:duration="4000"
+        android:fadingMode="fade_out">
+        <targets>
+            <target android:targetId="@id/ivIconSharedUIStart" />
+        </targets>
+    </fade>
+
+    <fade
+        android:duration="4000"
+        android:fadingMode="fade_in">
+        <targets>
+            <target android:targetId="@id/ivCloseSharedUi" />
+        </targets>
+    </fade>
 </transitionSet>

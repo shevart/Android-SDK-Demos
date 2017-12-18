@@ -25,7 +25,7 @@ class SharedUIStartActivity : AbsActivity() {
         val intent = Intent(this, SharedUIFinishActivity::class.java)
         // Pass data object in the bundle and populate details activity.
         val firstPair = Pair(cvSharedUI as View, getString(R.string.shared_ui_view))
-        val secondPair = Pair(ivIconSharedUI as View, getString(R.string.shared_ui_icon))
+        val secondPair = Pair(ivIconSharedUIStart as View, getString(R.string.shared_ui_icon))
         val thirdPair = Pair(tvSharedUISelect as View, getString(R.string.shared_ui_text))
 
         val options = ActivityOptions.makeSceneTransitionAnimation(this,

@@ -19,7 +19,7 @@
         <item name="android:windowSharedElementExitTransition">@transition/change_bounds</item>
     </style>
     <style name="AppTheme.MaterialAnimation.SharedViews.UI">
-        <item name="android:windowSharedElementEnterTransition">@transition/enter_shared_ui</item>
-        <item name="android:windowSharedElementExitTransition">@transition/exit_shared_ui</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/exit_shared_ui</item>
+        <item name="android:windowSharedElementExitTransition">@transition/enter_shared_ui</item>
     </style>
 </resources>
