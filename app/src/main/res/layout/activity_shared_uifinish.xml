@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/grey"
-            android:text="Title"
+            android:text="@string/title"
             android:layout_marginTop="4dp"
             android:textSize="27sp"
             android:transitionName="@string/shared_ui_text"/>

@@ -76,4 +76,5 @@
     <string name="shared_ui_text">shared_ui_text</string>
     <string name="shared_ui_view">shared_ui_view</string>
     <string name="shared_ui_elements">Shared UI elements</string>
+    <string name="title">Title</string>
 </resources>

@@ -15,7 +15,11 @@
         <item name="android:windowContentTransitions">true</item>
 
         <!-- set default animations for sharedViews between activities -->
-        <!--<item name="android:windowSharedElementEnterTransition">@transition/change_bounds</item>-->
-        <!--<item name="android:windowSharedElementExitTransition">@transition/change_bounds</item>-->
+        <item name="android:windowSharedElementEnterTransition">@transition/change_bounds</item>
+        <item name="android:windowSharedElementExitTransition">@transition/change_bounds</item>
+    </style>
+    <style name="AppTheme.MaterialAnimation.SharedViews.UI">
+        <item name="android:windowSharedElementEnterTransition">@transition/enter_shared_ui</item>
+        <item name="android:windowSharedElementExitTransition">@transition/exit_shared_ui</item>
     </style>
 </resources>
