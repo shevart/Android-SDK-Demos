@@ -87,6 +87,12 @@
             android:name=".animation.transition.sharedviewsui.SharedUIFinishActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.MaterialAnimation.SharedViews.UI" />
+        <activity
+            android:name=".view.ViewsTopicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.customlayoutmanager.CustomLayoutManagerDemoActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -25,7 +25,7 @@ public class SimpleItemsRVAdapter extends RecyclerView.Adapter<SimpleItemsRVAdap
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ViewHolder(UiUtil.inflate(parent, R.layout.item_simple_rv));
+        return new ViewHolder(UiUtil.INSTANCE.inflate(parent, R.layout.item_simple_rv));
     }
 
     @Override

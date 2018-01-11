@@ -30,7 +30,7 @@ class PrimeNumbersRVAdapter extends RecyclerView.Adapter<PrimeNumbersRVAdapter.V
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ViewHolder(UiUtil.inflate(parent, R.layout.item_prime_number));
+        return new ViewHolder(UiUtil.INSTANCE.inflate(parent, R.layout.item_prime_number));
     }
 
     @Override

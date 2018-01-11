@@ -17,6 +17,8 @@ import com.shevart.androidcorelearn.multi_threading.handler_looper.handler_delay
 import com.shevart.androidcorelearn.service.BinderServiceActivity
 
 import com.shevart.androidcorelearn.service.ServiceLearnActivity
+import com.shevart.androidcorelearn.view.ViewsTopicActivity
+import com.shevart.androidcorelearn.view.customlayoutmanager.CustomLayoutManagerDemoActivity
 
 object Launcher {
     fun serviceTopic(activity: Activity) {
@@ -55,6 +57,10 @@ object Launcher {
         startActivity(activity, AndroidAnimationsTopicsMenuActivity::class.java)
     }
 
+    fun viewTopic(activity: Activity) {
+        startActivity(activity, ViewsTopicActivity::class.java)
+    }
+
     fun transitionAnimation(activity: Activity) {
         startActivity(activity, TransitionAnimationActivity::class.java)
     }
@@ -73,6 +79,10 @@ object Launcher {
 
     fun handlerDelayedMessage(activity: Activity) {
         startActivity(activity, HandlerDelayedActivity::class.java)
+    }
+
+    fun customLayoutManager(activity: Activity) {
+        startActivity(activity, CustomLayoutManagerDemoActivity::class.java)
     }
 
     private fun startActivity(activity: Activity, clazz: Class<out Activity>) {

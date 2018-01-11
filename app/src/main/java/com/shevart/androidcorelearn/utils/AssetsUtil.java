@@ -7,7 +7,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import static com.shevart.androidcorelearn.utils.Util.checkNonNullOrEmpty;
+import static com.shevart.androidcorelearn.utils.UtilKt.checkNonNullOrEmpty;
+
 
 public class AssetsUtil {
     public static String stringFromAssetsFile(@NonNull Context context, @NonNull String fileName) throws IOException {

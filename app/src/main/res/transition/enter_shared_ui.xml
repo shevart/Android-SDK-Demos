@@ -12,7 +12,7 @@
         android:duration="4000"
         android:fadingMode="fade_out">
         <targets>
-            <target android:targetId="@id/ivIconSharedUIStart" />
+            <target android:targetId="@id/ivCloseSharedUi" />
         </targets>
     </fade>
 
@@ -20,7 +20,7 @@
         android:duration="4000"
         android:fadingMode="fade_in">
         <targets>
-            <target android:targetId="@id/ivCloseSharedUi" />
+            <target android:targetId="@id/ivIconSharedUIStart" />
         </targets>
     </fade>
 </transitionSet>

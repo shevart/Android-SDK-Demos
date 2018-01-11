@@ -4,8 +4,7 @@ import android.support.annotation.NonNull;
 
 import java.util.Locale;
 
-import static com.shevart.androidcorelearn.utils.Util.checkNonNullOrEmpty;
-import static com.shevart.androidcorelearn.utils.Util.isNullOrEmpty;
+import static com.shevart.androidcorelearn.utils.UtilKt.checkNonNullOrEmpty;
 
 @SuppressWarnings("WeakerAccess")
 public class XMLParserUtil {

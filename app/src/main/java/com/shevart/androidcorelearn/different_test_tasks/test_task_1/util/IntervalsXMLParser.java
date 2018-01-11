@@ -8,7 +8,8 @@ import com.shevart.androidcorelearn.utils.LogUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.shevart.androidcorelearn.utils.Util.checkNonNullOrEmpty;
+import static com.shevart.androidcorelearn.utils.UtilKt.checkNonNullOrEmpty;
+
 
 @SuppressWarnings("WeakerAccess")
 public class IntervalsXMLParser {

@@ -32,4 +32,9 @@
         android:id="@+id/btAnimationTopic"
         style="@style/ACLBaseWidget.Button.OpenTopic"
         android:text="@string/animations" />
+
+    <Button
+        android:id="@+id/btViewsTopic"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/views" />
 </LinearLayout>
