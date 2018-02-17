@@ -65,4 +65,13 @@ public class SimpleItem implements Parcelable {
             return new SimpleItem[size];
         }
     };
+
+    @Override
+    public String toString() {
+        return "SimpleItem{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

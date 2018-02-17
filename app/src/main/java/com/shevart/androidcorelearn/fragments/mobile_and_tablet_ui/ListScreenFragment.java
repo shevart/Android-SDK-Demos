@@ -36,7 +36,7 @@ public class ListScreenFragment extends Fragment implements SimpleItemsRVAdapter
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_list_screen, container, false);
-        adapter = new SimpleItemsRVAdapter(this, getItemsFromArguments());
+        adapter = new SimpleItemsRVAdapter(this, getItemsFromArguments(), false);
         RecyclerView rvSimpleItems = view.findViewById(R.id.rvSimpleItems);
         rvSimpleItems.setLayoutManager(new LinearLayoutManager(getContext()));
         rvSimpleItems.setAdapter(adapter);

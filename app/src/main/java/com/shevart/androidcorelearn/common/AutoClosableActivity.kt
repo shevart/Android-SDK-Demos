@@ -25,6 +25,6 @@ class AutoClosableActivity : AppCompatActivity() {
     }
 
     companion object {
-        private val DELAY = (1000 * 3).toLong() // 3 secs
+        private const val DELAY = (1000 * 3).toLong() // 3 secs
     }
 }

@@ -41,7 +41,6 @@ class SimpleViewModelSampleActivity : AbsActivity(), SimpleItemsRVAdapter.OnSimp
         }
     }
 
-
     override fun onSimpleItemSelected(simpleItem: SimpleItem) {
         UiNotificationsUtils.showToast(this, simpleItem.title)
     }
