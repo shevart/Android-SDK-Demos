@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tvSimpleItem"
     android:layout_width="match_parent"
     android:layout_height="75dp"
     android:paddingStart="16dp"
-    android:textSize="17sp"
-    android:fontFamily="sans-serif-medium"
-    android:gravity="center_vertical"
+    android:gravity="center"
     tools:text="@string/app_name"
     tools:ignore="RtlSymmetry">
 
-</TextView>
+    <TextView
+        android:id="@+id/tvSimpleItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:minWidth="50dp"
+        android:textSize="17sp"
+        android:background="@color/colorAccent"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        tools:text="@string/app_name"
+        tools:ignore="RtlSymmetry"/>
+
+</FrameLayout>

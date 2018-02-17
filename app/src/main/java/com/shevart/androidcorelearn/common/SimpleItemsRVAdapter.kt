@@ -30,7 +30,7 @@ class SimpleItemsRVAdapter(private val simpleItemSelectedListener: OnSimpleItemS
         val item = items[position]
         holder.tvSimpleItem.text = item.title
         if (useDifferentBackgroundColors) {
-            setBackgroundColor(holder.tvSimpleItem)
+            setBackgroundColor(holder.itemView)
         }
         holder.tvSimpleItem.setOnClickListener {
             simpleItemSelectedListener.onSimpleItemSelected(
