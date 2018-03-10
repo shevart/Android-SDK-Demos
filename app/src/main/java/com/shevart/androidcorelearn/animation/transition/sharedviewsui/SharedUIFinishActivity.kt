@@ -6,6 +6,7 @@ import com.shevart.androidcorelearn.R
 import com.shevart.androidcorelearn.common.AbsActivity
 import kotlinx.android.synthetic.main.activity_shared_uifinish.*
 
+
 class SharedUIFinishActivity : AbsActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

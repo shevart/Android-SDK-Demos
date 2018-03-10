@@ -9,13 +9,8 @@
         android:text="@string/select_topic" />
 
     <Button
-        android:id="@+id/btAnimationTransition"
+        android:id="@+id/btCLAnimationConstraintSet"
         style="@style/ACLBaseWidget.Button.OpenTopic"
-        android:text="@string/transition" />
-
-    <Button
-        android:id="@+id/btAnimationConstraintLayout"
-        style="@style/ACLBaseWidget.Button.OpenTopic"
-        android:text="@string/constraintlayout" />
+        android:text="@string/constraintset_1" />
 
 </LinearLayout>

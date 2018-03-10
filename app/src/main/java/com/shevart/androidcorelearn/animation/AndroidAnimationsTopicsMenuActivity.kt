@@ -11,6 +11,7 @@ class AndroidAnimationsTopicsMenuActivity : AbsActivity() {
     private val clickListener = View.OnClickListener {
         when (it.id) {
             R.id.btAnimationTransition -> Launcher.transitionAnimation(this)
+            R.id.btAnimationConstraintLayout -> Launcher.constraintLayoutAnimation(this)
             else -> throw IllegalArgumentException("Handle it!")
         }
     }
@@ -21,5 +22,6 @@ class AndroidAnimationsTopicsMenuActivity : AbsActivity() {
         enableToolbarBackButton()
 
         btAnimationTransition.setOnClickListener(clickListener)
+        btAnimationConstraintLayout.setOnClickListener(clickListener)
     }
 }

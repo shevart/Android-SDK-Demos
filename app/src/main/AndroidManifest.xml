@@ -93,6 +93,7 @@
         <activity
             android:name=".view.customlayoutmanager.CustomLayoutManagerDemoActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".animation.constraintlayout.ConstraintLayoutAnimationTopicActivity"></activity>
     </application>
 
 </manifest>

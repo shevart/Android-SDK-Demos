@@ -80,4 +80,6 @@
     <string name="custom_layout_manager">Custom LayoutManager</string>
     <string name="views_topic">Views section</string>
     <string name="views">Views</string>
+    <string name="constraintset_1">ConstraintSet #1</string>
+    <string name="constraintlayout">ConstraintLayout</string>
 </resources>

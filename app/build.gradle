@@ -23,7 +23,7 @@ android {
 
 ext {
     google_api_vers = '26.1.0'
-    arch_components_vers = '1.0.0'
+    arch_components_vers = '1.1.0'
 }
 
 
