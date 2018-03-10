@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import com.shevart.androidcorelearn.animation.AndroidAnimationsTopicsMenuActivity
 import com.shevart.androidcorelearn.animation.constraintlayout.ConstraintLayoutAnimationTopicActivity
+import com.shevart.androidcorelearn.animation.constraintlayout.constraintsetfirst.ConstraintSetFirstSampleActivity
 import com.shevart.androidcorelearn.animation.transition.TransitionAnimationActivity
 import com.shevart.androidcorelearn.animation.transition.sharedviews.SharedViewsStartActivity
 import com.shevart.androidcorelearn.animation.transition.sharedviewsui.SharedUIStartActivity
@@ -72,7 +73,7 @@ object Launcher {
     }
 
     fun transitionSetFirstSample(activity: Activity) {
-        TODO()
+        startActivity(activity, ConstraintSetFirstSampleActivity::class.java)
     }
 
     fun sharedElementsAnimation(activity: Activity) {

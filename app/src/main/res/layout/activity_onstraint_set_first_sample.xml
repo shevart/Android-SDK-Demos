@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clConstraintSetFirst"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shevart.androidcorelearn.animation.constraintlayout.constraintsetfirst.ConstraintSetFirstSampleActivity">
+
+    <Button
+        android:id="@+id/btOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/one"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/three"
+        app:layout_constraintBottom_toBottomOf="@+id/btOne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btOne" />
+
+    <Button
+        android:id="@+id/btTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/two"
+        app:layout_constraintBottom_toBottomOf="@+id/btThree"
+        app:layout_constraintEnd_toStartOf="@+id/btThree"
+        app:layout_constraintTop_toTopOf="@+id/btThree" />
+</android.support.constraint.ConstraintLayout>

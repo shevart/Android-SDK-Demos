@@ -82,4 +82,7 @@
     <string name="views">Views</string>
     <string name="constraintset_1">ConstraintSet #1</string>
     <string name="constraintlayout">ConstraintLayout</string>
+    <string name="one">One</string>
+    <string name="three">Three</string>
+    <string name="two">Two</string>
 </resources>
