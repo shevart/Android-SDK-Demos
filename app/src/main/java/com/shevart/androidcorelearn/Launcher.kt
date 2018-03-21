@@ -1,12 +1,13 @@
 package com.shevart.androidcorelearn
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
+import com.shevart.androidcorelearn.Launcher.startActivity
 import com.shevart.androidcorelearn.animation.AndroidAnimationsTopicsMenuActivity
 import com.shevart.androidcorelearn.animation.constraintlayout.ConstraintLayoutAnimationTopicActivity
 import com.shevart.androidcorelearn.animation.constraintlayout.constraintsetfirst.ConstraintSetFirstSampleActivity
 import com.shevart.androidcorelearn.animation.transition.TransitionAnimationActivity
+import com.shevart.androidcorelearn.animation.transition.layoutchanges.LayoutChangeTransitionActivity
 import com.shevart.androidcorelearn.animation.transition.sharedviews.SharedViewsStartActivity
 import com.shevart.androidcorelearn.animation.transition.sharedviewsui.SharedUIStartActivity
 import com.shevart.androidcorelearn.arch_components.ArchComponentsActivity
@@ -25,78 +26,87 @@ import com.shevart.androidcorelearn.view.customlayoutmanager.CustomLayoutManager
 
 object Launcher {
     fun serviceTopic(activity: Activity) {
-        startActivity(activity, ServiceLearnActivity::class.java)
+        startActivity<ServiceLearnActivity>(activity)
     }
 
     fun fragmentsTopic(activity: Activity) {
-        startActivity(activity, FragmentsDemoActivity::class.java)
+        startActivity<FragmentsDemoActivity>(activity)
     }
 
     fun multiThreadingTopic(activity: Activity) {
-        startActivity(activity, MultiThreadingDemoActivity::class.java)
+        startActivityOld(activity, MultiThreadingDemoActivity::class.java)
     }
 
     fun archComponents(activity: Activity) {
-        startActivity(activity, ArchComponentsActivity::class.java)
+        startActivityOld(activity, ArchComponentsActivity::class.java)
     }
 
     fun viewModelSimpleDemo(activity: Activity) {
-        startActivity(activity, SimpleViewModelSampleActivity::class.java)
+        startActivity<SimpleViewModelSampleActivity>(activity)
     }
 
     fun liveDataDemo(activity: Activity) {
-        startActivity(activity, LiveDataDemoActivity::class.java)
+        startActivity<LiveDataDemoActivity>(activity)
     }
 
     fun binderServiceDemo(activity: Activity) {
-        startActivity(activity, BinderServiceActivity::class.java)
+        startActivityOld(activity, BinderServiceActivity::class.java)
     }
 
     fun autoClosableScreen(activity: Activity) {
-        startActivity(activity, AutoClosableActivity::class.java)
+        startActivityOld(activity, AutoClosableActivity::class.java)
     }
 
     fun animationTopic(activity: Activity) {
-        startActivity(activity, AndroidAnimationsTopicsMenuActivity::class.java)
+        startActivityOld(activity, AndroidAnimationsTopicsMenuActivity::class.java)
     }
 
     fun viewTopic(activity: Activity) {
-        startActivity(activity, ViewsTopicActivity::class.java)
+        startActivityOld(activity, ViewsTopicActivity::class.java)
     }
 
     fun transitionAnimation(activity: Activity) {
-        startActivity(activity, TransitionAnimationActivity::class.java)
+        startActivityOld(activity, TransitionAnimationActivity::class.java)
     }
 
     fun constraintLayoutAnimation(activity: Activity) {
-        startActivity(activity, ConstraintLayoutAnimationTopicActivity::class.java)
+        startActivity<ConstraintLayoutAnimationTopicActivity>(activity)
     }
 
     fun transitionSetFirstSample(activity: Activity) {
-        startActivity(activity, ConstraintSetFirstSampleActivity::class.java)
+        startActivity<ConstraintSetFirstSampleActivity>(activity)
     }
 
     fun sharedElementsAnimation(activity: Activity) {
-        startActivity(activity, SharedViewsStartActivity::class.java)
+        startActivity<SharedViewsStartActivity>(activity)
     }
 
     fun sharedUIElementsAnimation(activity: Activity) {
-        startActivity(activity, SharedUIStartActivity::class.java)
+        startActivity<SharedUIStartActivity>(activity)
     }
 
     fun simpleHandlerSample(activity: Activity) {
-        startActivity(activity, HandlerBackgroundWorkerSampleActivity::class.java)
+        startActivity<HandlerBackgroundWorkerSampleActivity>(activity)
     }
 
     fun handlerDelayedMessage(activity: Activity) {
-        startActivity(activity, HandlerDelayedActivity::class.java)
+        startActivity<HandlerDelayedActivity>(activity)
     }
 
     fun customLayoutManager(activity: Activity) {
-        startActivity(activity, CustomLayoutManagerDemoActivity::class.java)
+        startActivity<CustomLayoutManagerDemoActivity>(activity)
     }
 
-    private fun startActivity(activity: Activity, clazz: Class<out Activity>) {
+    fun layoutChangesAnim(activity: Activity) {
+        startActivity<LayoutChangeTransitionActivity>(activity)
+    }
+
+    @Deprecated("Use new version!", ReplaceWith("startActivity<clazz>(activity)"))
+    private fun startActivityOld(activity: Activity, clazz: Class<out Activity>) {
         activity.startActivity(Intent(activity, clazz))
+    }
+
+    private inline fun <reified T: Activity> startActivity(activity: Activity) {
+        activity.startActivity(Intent(activity, T::class.java))
     }
 }

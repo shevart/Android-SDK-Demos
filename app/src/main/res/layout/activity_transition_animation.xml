@@ -18,4 +18,9 @@
         style="@style/ACLBaseWidget.Button.OpenTopic"
         android:text="@string/shared_ui_elements" />
 
+    <Button
+        android:id="@+id/btLayoutChanges"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/layout_changes" />
+
 </LinearLayout>

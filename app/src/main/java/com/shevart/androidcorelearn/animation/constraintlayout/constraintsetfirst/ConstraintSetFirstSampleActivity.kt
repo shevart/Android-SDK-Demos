@@ -10,7 +10,6 @@ import com.shevart.androidcorelearn.common.AbsActivity
 import kotlinx.android.synthetic.main.activity_onstraint_set_first_sample.*
 
 class ConstraintSetFirstSampleActivity : AbsActivity() {
-
     private lateinit var constraintLayout: ConstraintLayout
     private var isLastDirectionToDown = false
 

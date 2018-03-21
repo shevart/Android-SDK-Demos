@@ -12,6 +12,7 @@ class TransitionAnimationActivity : AbsActivity() {
         when (it.id) {
             R.id.btScreenSharedElements -> Launcher.sharedElementsAnimation(this)
             R.id.btScreenSharedUI -> Launcher.sharedUIElementsAnimation(this)
+            R.id.btLayoutChanges -> Launcher.layoutChangesAnim(this)
             else -> throw IllegalArgumentException("Handle it!")
         }
     }
@@ -23,5 +24,6 @@ class TransitionAnimationActivity : AbsActivity() {
 
         btScreenSharedElements.setOnClickListener(clickListener)
         btScreenSharedUI.setOnClickListener(clickListener)
+        btLayoutChanges.setOnClickListener(clickListener)
     }
 }
