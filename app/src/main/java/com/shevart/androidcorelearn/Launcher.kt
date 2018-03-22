@@ -8,6 +8,7 @@ import com.shevart.androidcorelearn.animation.constraintlayout.ConstraintLayoutA
 import com.shevart.androidcorelearn.animation.constraintlayout.constraintsetfirst.ConstraintSetFirstSampleActivity
 import com.shevart.androidcorelearn.animation.transition.TransitionAnimationActivity
 import com.shevart.androidcorelearn.animation.transition.layoutchanges.LayoutChangeTransitionActivity
+import com.shevart.androidcorelearn.animation.transition.scene.SceneDemoActivity
 import com.shevart.androidcorelearn.animation.transition.sharedviews.SharedViewsStartActivity
 import com.shevart.androidcorelearn.animation.transition.sharedviewsui.SharedUIStartActivity
 import com.shevart.androidcorelearn.arch_components.ArchComponentsActivity
@@ -99,6 +100,10 @@ object Launcher {
 
     fun layoutChangesAnim(activity: Activity) {
         startActivity<LayoutChangeTransitionActivity>(activity)
+    }
+
+    fun sceneDemo(activity: Activity) {
+        startActivity<SceneDemoActivity>(activity)
     }
 
     @Deprecated("Use new version!", ReplaceWith("startActivity<clazz>(activity)"))

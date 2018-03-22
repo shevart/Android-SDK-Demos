@@ -26,7 +26,7 @@ class LayoutChangeTransitionActivity : AbsActivity() {
             flTestContent.visibility = View.INVISIBLE
             TransitionManager.beginDelayedTransition(cvLayoutChangesAnim)
             flTestContent.layoutParams = flTestContent.layoutParams.apply {
-                height = oneDpInPixels * (50 + random.nextInt(100))
+                height = oneDpInPixels * (50 + random.nextInt(250))
             }
             showWithAlpha()
         }

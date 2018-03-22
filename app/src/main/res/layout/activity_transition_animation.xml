@@ -23,4 +23,9 @@
         style="@style/ACLBaseWidget.Button.OpenTopic"
         android:text="@string/layout_changes" />
 
+    <Button
+        android:id="@+id/btSceneDemo"
+        style="@style/ACLBaseWidget.Button.OpenTopic"
+        android:text="@string/scene_demo" />
+
 </LinearLayout>

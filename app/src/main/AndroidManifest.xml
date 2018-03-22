@@ -99,7 +99,8 @@
         <activity
             android:name=".animation.constraintlayout.constraintsetfirst.ConstraintSetFirstSampleActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".animation.transition.layoutchanges.LayoutChangeTransitionActivity"></activity>
+        <activity android:name=".animation.transition.layoutchanges.LayoutChangeTransitionActivity" />
+        <activity android:name=".animation.transition.scene.SceneDemoActivity"></activity>
     </application>
 
 </manifest>

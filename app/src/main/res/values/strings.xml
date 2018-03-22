@@ -86,4 +86,7 @@
     <string name="three">Three</string>
     <string name="two">Two</string>
     <string name="layout_changes">Layout changes</string>
+    <string name="scene_2">Scene 2</string>
+    <string name="scene_1">Scene 1</string>
+    <string name="scene_demo">Scene demo</string>
 </resources>
